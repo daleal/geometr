@@ -21,7 +21,8 @@
     "lint:eslint": "eslint --ext .js,.ts,.vue .",
     "lint:stylelint": "stylelint **/*.{css,scss,vue}",
     "test": "run-p test:*",
-    "test:vitest": "vitest run --coverage"
+    "test:vitest": "vitest run --coverage",
+    "version:get": "node -p \"require('./package.json').version\""
   },
   "dependencies": {
     "vue": "^3.2.25"
