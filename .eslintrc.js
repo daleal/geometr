@@ -11,7 +11,7 @@ module.exports = {
     'airbnb-base',
     '@vue/typescript/recommended',
   ],
-  plugins: ['import'],
+  plugins: ['import', '@typescript-eslint'],
   parserOptions: {
     ecmaVersion: 2021,
   },
@@ -46,5 +46,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
   },
 };
