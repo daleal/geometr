@@ -1,6 +1,10 @@
 {
   "name": "geometr",
   "version": "0.0.1",
+  "author": {
+    "name": "Daniel Leal",
+    "email": "dlleal@uc.cl"
+  },
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
