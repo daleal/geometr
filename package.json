@@ -19,8 +19,7 @@
     "lint:stylelint": "stylelint **/*.{css,scss,vue}",
     "build": "run-p build:*",
     "build:scripts": "vite build",
-    "build:types": "tsc --emitDeclarationOnly && tsc-alias",
-    "preview": "vite preview"
+    "build:types": "tsc --emitDeclarationOnly && tsc-alias"
   },
   "dependencies": {
     "vue": "^3.2.25"
