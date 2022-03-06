@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -12,6 +14,10 @@ export default defineConfig({
       fileName: (ext) => `index.${ext}.js`,
     },
     sourcemap: true,
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
   },
   resolve: {
     alias: {

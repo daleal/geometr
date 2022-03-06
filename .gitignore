@@ -1,6 +1,9 @@
 # Development playground
 /dev/src/GPlayground.vue
 
+# Testing
+coverage
+
 # Logs
 logs
 *.log
