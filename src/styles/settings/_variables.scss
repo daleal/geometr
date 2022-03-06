@@ -9,7 +9,7 @@ $typography: map-deep-merge(
       'size': 6rem,
       'weight': 300,
       'line-height': 6rem,
-      'letter-spacing': -0.015625em,
+      'letter-spacing': -0.0156em,
       'font-family': $font-family,
       'text-transform': none
     ),
@@ -17,7 +17,7 @@ $typography: map-deep-merge(
       'size': 3.75rem,
       'weight': 300,
       'line-height': 3.75rem,
-      'letter-spacing': -0.0083333333em,
+      'letter-spacing': -0.0083em,
       'font-family': $font-family,
       'text-transform': none
     ),
@@ -33,7 +33,7 @@ $typography: map-deep-merge(
       'size': 2.125rem,
       'weight': 400,
       'line-height': 2.5rem,
-      'letter-spacing': 0.0073529412em,
+      'letter-spacing': 0.0074em,
       'font-family': $font-family,
       'text-transform': none
     ),
@@ -57,15 +57,15 @@ $typography: map-deep-merge(
       'size': 1rem,
       'weight': normal,
       'line-height': 1.75rem,
-      'letter-spacing': 0.009375em,
+      'letter-spacing': 0.0094em,
       'font-family': $font-family,
       'text-transform': none
     ),
     'subtitle-2': (
-      'size': .875rem,
+      'size': 0.875rem,
       'weight': 500,
       'line-height': 1.375rem,
-      'letter-spacing': 0.0071428571em,
+      'letter-spacing': 0.0071em,
       'font-family': $font-family,
       'text-transform': none
     ),
@@ -73,39 +73,39 @@ $typography: map-deep-merge(
       'size': 1rem,
       'weight': 400,
       'line-height': 1.5rem,
-      'letter-spacing': 0.03125em,
+      'letter-spacing': 0.0313em,
       'font-family': $font-family,
       'text-transform': none
     ),
     'body-2': (
-      'size': .875rem,
+      'size': 0.875rem,
       'weight': 400,
       'line-height': 1.25rem,
-      'letter-spacing': 0.0178571429em,
+      'letter-spacing': 0.0179em,
       'font-family': $font-family,
       'text-transform': none
     ),
     'button': (
-      'size': .875rem,
+      'size': 0.875rem,
       'weight': 500,
       'line-height': 2.25rem,
-      'letter-spacing': 0.0892857143em,
+      'letter-spacing': 0.0893em,
       'font-family': $font-family,
       'text-transform': uppercase
     ),
     'caption': (
-      'size': .75rem,
+      'size': 0.75rem,
       'weight': 400,
       'line-height': 1.25rem,
-      'letter-spacing': 0.0333333333em,
+      'letter-spacing': 0.0333em,
       'font-family': $font-family,
       'text-transform': none
     ),
     'overline': (
-      'size': .75rem,
+      'size': 0.75rem,
       'weight': 500,
       'line-height': 2rem,
-      'letter-spacing': 0.1666666667em,
+      'letter-spacing': 0.1667em,
       'font-family': $font-family,
       'text-transform': uppercase
     )

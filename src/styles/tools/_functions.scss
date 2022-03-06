@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:meta';
 
 // Vuetify's map-deep-merge
 @function map-deep-merge($parent-map, $child-map) {
@@ -19,5 +20,5 @@
     }
   }
 
-  @return $result
+  @return $result;
 }
