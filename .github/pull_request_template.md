@@ -1,5 +1,3 @@
-# <Feature|Bugfix|Hotfix|Docs|Chore|Other>: <Title>
-
 ## Description
 
 _Description of the pull request_
