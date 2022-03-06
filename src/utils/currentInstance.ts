@@ -1,7 +1,7 @@
 import { getCurrentInstance as vueGetCurrentInstance } from 'vue';
 import { toKebabCase } from '@/utils/helpers';
 
-export function getCurrentInstance(name: string, message?: string) {
+export const getCurrentInstance = (name: string, message?: string) => {
   const instance = vueGetCurrentInstance();
 
   if (!instance) {
@@ -9,8 +9,6 @@ export function getCurrentInstance(name: string, message?: string) {
   }
 
   return instance;
-}
+};
 
-export function getCurrentInstanceName(name = 'composable') {
-  return toKebabCase(getCurrentInstance(name).type?.name);
-}
+export const getCurrentInstanceName = (name = 'composable') => toKebabCase(getCurrentInstance(name).type?.name);
