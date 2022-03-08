@@ -12,10 +12,12 @@ const props = defineProps({
 
 const emit = defineEmits<{(e: 'click'): void}>();
 
-const { sizeClasses } = useSize(props);
+const baseClass = 'g-button';
+
+const { sizeClasses } = useSize(props, baseClass);
 
 const classes = computed(() => [
-  'g-button',
+  baseClass,
   sizeClasses.value,
 ]);
 </script>
@@ -28,10 +30,6 @@ const classes = computed(() => [
     {{ props.text }}
   </button>
 </template>
-
-<script lang="ts">
-export default { name: 'GButton' };
-</script>
 
 <style lang="scss" scoped>
 @use './g-button.scss';
