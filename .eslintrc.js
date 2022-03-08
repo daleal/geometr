@@ -36,6 +36,7 @@ module.exports = {
   rules: {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': 'off',
+    'no-spaced-func': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -46,6 +47,8 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'func-call-spacing': 'off',
+    '@typescript-eslint/func-call-spacing': ['error'],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
   },
