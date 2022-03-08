@@ -6,13 +6,13 @@
     "email": "dlleal@uc.cl"
   },
   "license": "MIT",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/main.umd.js",
+  "module": "dist/main.es.js",
+  "types": "dist/main.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs.js",
-      "import": "./dist/index.es.js"
+      "require": "./dist/main.umd.js",
+      "import": "./dist/main.es.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -20,7 +20,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:scripts": "vite build",
-    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly && tsc-alias",
+    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext .js,.ts,.vue .",
     "lint:stylelint": "stylelint **/*.{css,scss,vue}",
@@ -55,7 +55,6 @@
     "stylelint-config-recommended": "^7.0.0",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-scss": "^4.1.0",
-    "tsc-alias": "^1.6.4",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
     "vitest": "^0.5.9",
