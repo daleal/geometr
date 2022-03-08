@@ -6,17 +6,8 @@ Inside the `src` sub-folder you will find a `GPlayground.template.vue` file. Cop
 
 ## Importing components
 
-To import a component from the library, you can use two methods:
+To import a component from the library, first build the library and then just import it:
 
-1. Import the component directly from the Geometr project by using something like this:
-    ```ts
-    import { GButton } from '~/src/main';
-    ```
-2. Import the component from the `dist` folder after building the project using something like this:
-    ```ts
-    // For ES module imports
-    import { GButton } from '~/dist/index.es';
-
-    // For CJS imports
-    import { GButton } from '~/dist/index.cjs';
-    ```
+```ts
+import { GButton } from 'geometr';
+```
