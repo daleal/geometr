@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { makeSizeProps, useSize } from '@/composables/size';
 
-const $props = defineProps({
+const props = defineProps({
   text: {
     type: String,
     required: true,
@@ -10,9 +10,9 @@ const $props = defineProps({
   ...makeSizeProps(),
 });
 
-const $emit = defineEmits<{(e: 'click'): void}>();
+const emit = defineEmits<{(e: 'click'): void}>();
 
-const { sizeClasses } = useSize($props);
+const { sizeClasses } = useSize(props);
 
 const classes = computed(() => [
   'g-button',
@@ -23,9 +23,9 @@ const classes = computed(() => [
 <template>
   <button
     :class="classes"
-    @click="$emit('click')"
+    @click="emit('click')"
   >
-    {{ $props.text }}
+    {{ props.text }}
   </button>
 </template>
 
