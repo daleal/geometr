@@ -14,7 +14,7 @@
       "require": "./dist/main.umd.js",
       "import": "./dist/main.es.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./styles": "./dist/style.css"
   },
   "sideEffects": false,
   "scripts": {
@@ -26,6 +26,9 @@
     "lint:stylelint": "stylelint **/*.{css,scss,vue}",
     "test": "run-p test:*",
     "test:vitest": "vitest run --coverage",
+    "watch:build": "run-p watch:build:*",
+    "watch:build:scripts": "vite build --watch",
+    "watch:build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly --watch",
     "version:get": "node -p \"require('./package.json').version\""
   },
   "dependencies": {
