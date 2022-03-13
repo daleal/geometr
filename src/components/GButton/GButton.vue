@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import './g-button.scss';
+
 import { computed } from 'vue';
 import { makeSizeProps, useSize } from '@/composables/size';
 
@@ -30,7 +32,3 @@ const classes = computed(() => [
     {{ props.text }}
   </button>
 </template>
-
-<style lang="scss" scoped>
-@use './g-button.scss';
-</style>

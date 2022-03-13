@@ -1,9 +1,9 @@
-@use '../tools/functions' as *;
+@use '../tools/functions';
 
 $font-family: 'Roboto', sans-serif;
 
 $typography: () !default;
-$typography: map-deep-merge(
+$typography: functions.map-deep-merge(
   (
     'h1': (
       'size': 6rem,
