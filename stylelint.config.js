@@ -33,7 +33,7 @@ module.exports = {
     'function-no-unknown': [
       true,
       {
-        ignoreFunctions: [/^map\..*/, /^meta\..*/, /^functions\..*/],
+        ignoreFunctions: [/^map\..*/, /^meta\..*/, /^functions\..*/, 'map-deep-merge'],
       },
     ],
     'at-rule-no-unknown': null,

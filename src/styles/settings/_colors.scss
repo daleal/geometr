@@ -1,0 +1,27 @@
+@use '../tools/functions';
+
+$blue-grey: () !default;
+$blue-grey: functions.map-deep-merge(
+  (
+    'lighten-5': hsl(0deg 0% 100%),
+    'lighten-4': hsl(198deg 4% 91%),
+    'lighten-3': hsl(200deg 9% 83%),
+    'lighten-2': hsl(200deg 10% 72%),
+    'lighten-1': hsl(199deg 8% 65%),
+    'base': hsl(204deg 5% 59%),
+    'darken-1': hsl(199deg 9% 54%),
+    'darken-2': hsl(240deg 3% 40%),
+    'darken-3': hsl(234deg 7% 28%),
+    'darken-4': hsl(225deg 7% 11%)
+  ),
+  $blue-grey
+);
+
+$purple: () !default;
+$purple : functions.map-deep-merge(
+  (
+    'base': hsl(276deg 100% 62%),
+    'darken-1': hsl(276deg 90% 56%)
+  ),
+  $purple
+);
