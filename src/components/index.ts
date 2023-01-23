@@ -1,1 +1,0 @@
-export { GButton } from './GButton';
