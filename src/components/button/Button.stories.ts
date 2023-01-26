@@ -1,4 +1,4 @@
-import { buildTemplate } from '@/utils/stories';
+import { buildStoryFactory } from '@/utils/stories';
 import Button from './Button.vue';
 
 export default {
@@ -6,6 +6,6 @@ export default {
   component: Button,
 };
 
-const templateFactory = buildTemplate(Button, '<Button v-bind="args" />');
+const storyFactory = buildStoryFactory(Button, '<Button v-bind="args" />');
 
-export const Primary = templateFactory({ text: 'NAIS' });
+export const Primary = storyFactory({ text: 'NAIS' });
