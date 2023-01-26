@@ -1,11 +1,31 @@
-import { buildStoryFactory } from '@/utils/stories';
+import type { Meta, StoryObj } from '@storybook/vue3';
+// @ts-expect-error: type declarations are broken on the library
+import { withActions } from '@storybook/addon-actions/decorator';
 import Button from './Button.vue';
 
-export default {
+type Story = StoryObj<typeof Button>;
+
+const meta: Meta<typeof Button> = {
   title: 'Button',
   component: Button,
+  decorators: [withActions],
+  parameters: {
+    actions: {
+      handles: ['click'],
+    },
+  },
 };
 
-const storyFactory = buildStoryFactory(Button, '<Button v-bind="args" />');
+export default meta;
 
-export const Primary = storyFactory({ text: 'NAIS' });
+const BaseStory: Story = {
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args" />',
+  }),
+};
+
+export const Primary: Story = { ...BaseStory, args: { text: 'Button' } };

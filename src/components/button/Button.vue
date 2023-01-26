@@ -7,6 +7,6 @@ const emit = defineEmits<{ (e: 'click'): void }>();
   <button
     @click="emit('click')"
   >
-    AWA {{ props.text }}
+    {{ props.text }}
   </button>
 </template>
