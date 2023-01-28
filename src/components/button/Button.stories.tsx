@@ -10,6 +10,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   decorators: [withActions],
   parameters: {
+    controls: { sort: 'requiredFirst' },
     actions: {
       handles: ['click'],
     },
@@ -19,13 +20,12 @@ const meta: Meta<typeof Button> = {
 export default meta;
 
 const BaseStory: Story = {
-  render: (args) => ({
-    components: { Button },
-    setup() {
-      return { args };
-    },
-    template: '<Button v-bind="args" />',
-  }),
+  render: (args) => <Button {...args} />,
 };
 
-export const Primary: Story = { ...BaseStory, args: { text: 'Button' } };
+export const Primary: Story = {
+  ...BaseStory,
+  args: {
+    text: 'Button',
+  },
+};
