@@ -1,7 +1,7 @@
 {
   "name": "geometr",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/main.umd.js",
   "module": "dist/main.es.js",
@@ -13,12 +13,11 @@
     }
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "eslint": "eslint --ext .js,.ts,.vue .",
-    "storybook": "storybook dev -p 6006",
-    "preview": "vite preview"
+    "build": "tsc --project tsconfig.build.json --emitDeclarationOnly && vite build",
+    "eslint": "eslint --ext .js,.ts,.tsx,.vue .",
+    "storybook": "storybook dev -p 6006"
   },
+  "files": ["dist"],
   "devDependencies": {
     "@storybook/addon-actions": "^7.0.0-beta.34",
     "@storybook/addon-backgrounds": "^7.0.0-beta.34",
@@ -55,6 +54,6 @@
     "vue-tsc": "^1.0.11"
   },
   "peerDependencies": {
-    "vue": "^3.2.45"
+    "vue": ">=3.0.0"
   }
 }

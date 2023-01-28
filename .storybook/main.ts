@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   stories: ['../src/**/*.stories.tsx'],
   addons: [
     '@storybook/addon-links',
@@ -6,13 +6,13 @@ module.exports = {
   ],
   framework: {
     name: '@storybook/vue3-vite',
-    options: {}
+    options: {},
   },
   typescript: {
     check: false,
-    checkOptions: {}
+    checkOptions: {},
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };
