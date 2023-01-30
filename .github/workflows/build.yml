@@ -6,33 +6,40 @@ on:
       - ".github/workflows/build.yml"
       - "src/**"
       - "package.json"
-      - "package-lock.json"
+      - "pnpm-lock.yaml"
+      - "tsconfig.build.json"
       - "tsconfig.json"
       - "tsconfig.node.json"
       - "vite.config.ts"
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Node.js v16
-        uses: actions/setup-node@v1
+      - name: Set up Node.js v19.4.0
+        uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 19.4.0
+
+      - name: Set up pnpm v7.26
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.26
+          run_install: false
 
       - name: Set up node_modules cache
         uses: actions/cache@v2
         id: node-modules-cache
         with:
-          key: node-modules-cache-${{ hashFiles('**/package-lock.json') }}
+          key: node-modules-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
           path: '**/node_modules'
 
       - name: Install dependencies
         if: steps.node-modules-cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
-      - name: Build the application
-        run: npm run build
+      - name: Build the library
+        run: pnpm run build

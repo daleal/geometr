@@ -1,1 +1,3 @@
-export { GButton } from './GButton';
+import Button from './button/Button.vue';
+
+export { Button };

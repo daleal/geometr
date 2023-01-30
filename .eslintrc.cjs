@@ -1,11 +1,5 @@
 module.exports = {
   root: true,
-  env: {
-    'vue/setup-compiler-macros': true,
-    browser: true,
-    es2021: true,
-    node: true,
-  },
   extends: [
     'plugin:vue/vue3-recommended',
     'airbnb-base',
@@ -13,12 +7,12 @@ module.exports = {
   ],
   plugins: ['import', '@typescript-eslint'],
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 'latest',
   },
   settings: {
     'import/resolver': {
       node: {
-        paths: ['src', 'test'],
+        paths: ['src', '.storybook'],
       },
       alias: {
         map: [
@@ -34,9 +28,9 @@ module.exports = {
     },
   },
   rules: {
+    'prefer-destructuring': ['error', { VariableDeclarator: { array: true } }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': 'off',
-    'no-spaced-func': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -47,9 +41,10 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    '@typescript-eslint/no-unused-vars': ['error'],
+    'no-spaced-func': 'off',
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': ['error'],
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
+    'vue/multi-word-component-names': 'off',
   },
 };
