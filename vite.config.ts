@@ -7,9 +7,12 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src', 'main.ts'),
+      entry: [
+        resolve(__dirname, 'src', 'main.ts'),
+        resolve(__dirname, 'src', 'styles.ts'),
+      ],
       name: 'geometr',
-      fileName: (format) => `main.${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
