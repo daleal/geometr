@@ -1,28 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-// @ts-expect-error: type declarations are broken on the library
-import { withActions } from '@storybook/addon-actions/decorator';
+import { action } from '@storybook/addon-actions';
 import Button from './Button.vue';
 
+// Auxiliar Types
 type Story = StoryObj<typeof Button>;
 
+// Meta
 const meta: Meta<typeof Button> = {
-  title: 'Button',
+  title: 'components/Button',
   component: Button,
-  decorators: [withActions],
-  parameters: {
-    controls: { sort: 'requiredFirst' },
-    actions: {
-      handles: ['click'],
-    },
-  },
+  parameters: { controls: { sort: 'requiredFirst' } },
 };
 
 export default meta;
 
+// Actions
+const onClickAction = action('click');
+
+// Base Stories
 const BaseStory: Story = {
-  render: (args) => <Button {...args} />,
+  render: (args) => <Button {...args} onClick={onClickAction} />,
 };
 
+// Exported Stories
 export const Primary: Story = {
   ...BaseStory,
   args: {
