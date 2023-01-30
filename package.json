@@ -21,6 +21,7 @@
     "build": "tsc --project tsconfig.build.json --emitDeclarationOnly && vite build",
     "lint:eslint": "eslint --ext .js,.ts,.tsx,.vue .",
     "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
     "version:get": "node -p \"require('./package.json').version\""
   },
   "files": [
