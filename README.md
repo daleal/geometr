@@ -15,7 +15,7 @@ pnpm install
 To run StoryBook, run the following command:
 
 ```sh
-pnpm run storybook
+pnpm run storybook:dev
 ```
 
 Then, open your browser on `http://localhost:6006`.
