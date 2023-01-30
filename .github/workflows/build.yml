@@ -1,0 +1,39 @@
+name: build
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/build.yml"
+      - "src/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "tsconfig.build.json"
+      - "tsconfig.json"
+      - "tsconfig.node.json"
+      - "vite.config.ts"
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js v19.4.0
+        uses: actions/setup-node@v2
+        with:
+          node-version: 19.4.0
+
+      - name: Set up node_modules cache
+        uses: actions/cache@v2
+        id: node-modules-cache
+        with:
+          key: node-modules-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: '**/node_modules'
+
+      - name: Install dependencies
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Build the library
+        run: pnpm run build

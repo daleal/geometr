@@ -19,8 +19,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc --project tsconfig.build.json --emitDeclarationOnly && vite build",
-    "eslint": "eslint --ext .js,.ts,.tsx,.vue .",
-    "storybook": "storybook dev -p 6006"
+    "lint:eslint": "eslint --ext .js,.ts,.tsx,.vue .",
+    "storybook": "storybook dev -p 6006",
+    "version:get": "node -p \"require('./package.json').version\""
   },
   "files": [
     "dist"
