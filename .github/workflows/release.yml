@@ -40,7 +40,7 @@ jobs:
         run: pnpm run build
 
       - name: Publish Geometr
-        run: pnpm publish
+        run: pnpm publish --publish-branch stable
 
   github-release:
     needs: npm-release

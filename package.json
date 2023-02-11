@@ -1,7 +1,6 @@
 {
   "name": "geometr",
-  "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "dist/main.umd.js",
   "module": "dist/main.es.js",
@@ -19,7 +18,7 @@
   "sideEffects": false,
   "scripts": {
     "bump!": "sh scripts/bump.sh",
-    "build": "tsc --project tsconfig.build.json --emitDeclarationOnly && vite build",
+    "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
     "lint:eslint": "eslint --ext .js,.ts,.tsx,.vue .",
     "lint:stylelint": "stylelint **/*.{css,scss,vue}",
     "storybook:dev": "storybook dev -p 6006",
