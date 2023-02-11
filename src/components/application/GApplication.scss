@@ -1,0 +1,15 @@
+@use "@/styles/variables/colors";
+
+.g-application {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  color: colors.$white;
+  background-color: colors.$background;
+  background-image:
+    radial-gradient(at 31% 33%, colors.$background-accent-1 0, transparent 49%),
+    radial-gradient(at 72% 60%, colors.$background-accent-2 0, transparent 55%);
+}
