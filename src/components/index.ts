@@ -1,3 +1,2 @@
-import Button from './button/Button.vue';
-
-export { Button };
+export * from './button';
+export * from './glass';
