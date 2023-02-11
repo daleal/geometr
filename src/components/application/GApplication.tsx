@@ -5,11 +5,14 @@ import './GApplication.scss';
 
 export const GApplication = defineComponent({
   name: 'GApplication',
-  setup(props, { slots }) {
+  setup(props, { attrs, slots }) {
     useRender(() => (
       <div class="g-application">
         <div class="g-application__scroll">
-          <div class="g-application__wrapper">
+          <div
+            class="g-application__wrapper"
+            { ...attrs }
+          >
             { slots.default?.() }
           </div>
         </div>
