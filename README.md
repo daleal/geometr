@@ -33,3 +33,13 @@ To develop the library along side another external project, you can add the foll
 ```
 
 Install the external project dependencies and use the library as the documentation states.
+
+## Bumping the version
+
+To bump the version before publishing, switch to the `main` branch and run the following command:
+
+```sh
+pnpm run bump! minor
+```
+
+You can run a `patch`, `minor` or `major` bump, depending on the changes to be released.
