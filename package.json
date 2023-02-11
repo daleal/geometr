@@ -1,6 +1,6 @@
 {
   "name": "geometr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "dist/main.umd.js",
   "module": "dist/main.es.js",
@@ -11,8 +11,8 @@
       "import": "./dist/main.es.js"
     },
     "./styles": {
-      "require": "./dist/styles.umd.js",
-      "import": "./dist/styles.es.js"
+      "require": "./dist/style.css",
+      "import": "./dist/style.css"
     }
   },
   "sideEffects": false,
