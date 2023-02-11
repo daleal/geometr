@@ -15,9 +15,7 @@ export default meta;
 
 // Exported Stories
 export const ApplicationBase: Story = {
-  parameters: {
-    layout: 'fullscreen',
-  },
+  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication {...args} style={{ padding: '1rem' }} >
       This application has content

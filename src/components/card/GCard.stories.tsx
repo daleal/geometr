@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
+import { GApplication } from '@/components/application';
 import { GCard } from './index';
 
 // Auxiliar Types
@@ -15,20 +16,26 @@ export default meta;
 
 // Exported Stories
 export const HeaderAndContent: Story = {
+  parameters: { layout: 'fullscreen' },
   render: (args) => (
-    <GCard {...args}>
-      {{
-        header: () => <>This is the title</>,
-        content: () => <>This is the content of the card. It usually is quite large.</>,
-      }}
-    </GCard>
+    <GApplication style={{ padding: '1rem' }} >
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+          content: () => <>This is the content of the card. It usually is quite large.</>,
+        }}
+      </GCard>
+    </GApplication>
   ),
 };
 
 export const DefaultProp: Story = {
+  parameters: { layout: 'fullscreen' },
   render: (args) => (
-    <GCard {...args}>
-      This card only has a content prop
-    </GCard>
+    <GApplication style={{ padding: '1rem' }} >
+      <GCard {...args}>
+        This card only has a content prop
+      </GCard>
+    </GApplication>
   ),
 };
