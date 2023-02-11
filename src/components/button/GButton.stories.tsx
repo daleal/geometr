@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { action } from '@storybook/addon-actions';
-import Button from './Button.vue';
+import { GButton } from './index';
 
 // Auxiliar Types
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof GButton>;
 
 // Meta
-const meta: Meta<typeof Button> = {
-  title: 'components/Button',
-  component: Button,
+const meta: Meta<typeof GButton> = {
+  title: 'components/GButton',
+  component: GButton,
   parameters: { controls: { sort: 'requiredFirst' } },
 };
 
@@ -19,7 +19,7 @@ const onClickAction = action('click');
 
 // Base Stories
 const BaseStory: Story = {
-  render: (args) => <Button {...args} onClick={onClickAction} />,
+  render: (args) => <GButton {...args} onClick={onClickAction} />,
 };
 
 // Exported Stories

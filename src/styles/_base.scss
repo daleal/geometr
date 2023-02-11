@@ -1,0 +1,5 @@
+@use "./variables/typography";
+
+:root {
+  font-family: typography.$font-family;
+}
