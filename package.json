@@ -1,6 +1,6 @@
 {
   "name": "geometr",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "main": "dist/main.umd.js",
   "module": "dist/main.es.js",
@@ -30,6 +30,7 @@
     "dist"
   ],
   "devDependencies": {
+    "@fontsource/chakra-petch": "^4.5.9",
     "@storybook/addon-actions": "^7.0.0-beta.46",
     "@storybook/addon-backgrounds": "^7.0.0-beta.46",
     "@storybook/addon-docs": "^7.0.0-beta.46",

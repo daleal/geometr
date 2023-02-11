@@ -40,6 +40,21 @@ export const HeaderAndContent: Story = {
   ),
 };
 
+export const HeaderSubtitleAndContent: Story = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+          subtitle: () => <>This is a subtitle</>,
+          content: () => <>This is the content of the card. It usually is quite large.</>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+};
+
 export const MultipleCards: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
