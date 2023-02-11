@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/chakra-petch': ^4.5.9
   '@storybook/addon-actions': ^7.0.0-beta.46
   '@storybook/addon-backgrounds': ^7.0.0-beta.46
   '@storybook/addon-docs': ^7.0.0-beta.46
@@ -44,6 +45,7 @@ specifiers:
   vue-tsc: ^1.0.11
 
 devDependencies:
+  '@fontsource/chakra-petch': 4.5.9
   '@storybook/addon-actions': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-backgrounds': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-docs': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
@@ -1626,6 +1628,10 @@ packages:
 
   /@fal-works/esbuild-plugin-global-externals/2.1.2:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
+    dev: true
+
+  /@fontsource/chakra-petch/4.5.9:
+    resolution: {integrity: sha512-53gZP08NrZdDB2zSZV5+eg51iKg+pGKCHiALbB8FTv6Gp2EDPGV39ixAhO72bJhChEbTwrH5yJ7GFYLN7S93ow==}
     dev: true
 
   /@humanwhocodes/config-array/0.11.8:
