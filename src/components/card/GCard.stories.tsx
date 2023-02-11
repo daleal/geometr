@@ -15,6 +15,17 @@ const meta: Meta<typeof GCard> = {
 export default meta;
 
 // Exported Stories
+export const DefaultProp: Story = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication style={{ padding: '1rem' }} >
+      <GCard {...args}>
+        This card only has the default prop
+      </GCard>
+    </GApplication>
+  ),
+};
+
 export const HeaderAndContent: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
@@ -29,13 +40,20 @@ export const HeaderAndContent: Story = {
   ),
 };
 
-export const DefaultProp: Story = {
+export const MultipleCards: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication style={{ padding: '1rem' }} >
-      <GCard {...args}>
-        This card only has a content prop
-      </GCard>
+      {
+        [...Array(12)].map((_, index) => (
+          <GCard {...args} key={index} style={{ 'margin-bottom': '1rem' }} >
+            {{
+              header: () => <>Card number {index + 1}</>,
+              content: () => <>This is the content of the card. It usually is quite large.</>,
+            }}
+          </GCard>
+        ))
+      }
     </GApplication>
   ),
 };
