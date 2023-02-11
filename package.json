@@ -18,7 +18,7 @@
   "sideEffects": false,
   "scripts": {
     "bump!": "sh scripts/bump.sh",
-    "build": "tsc --project tsconfig.build.json --emitDeclarationOnly && vite build",
+    "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
     "lint:eslint": "eslint --ext .js,.ts,.tsx,.vue .",
     "lint:stylelint": "stylelint **/*.{css,scss,vue}",
     "storybook:dev": "storybook dev -p 6006",
