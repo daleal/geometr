@@ -1,6 +1,6 @@
 # Geometr
 
-To see the library documentation, please start StoryBook. Every part of the library is documented there. For general library development documentation, continue reading this `README.md` file.
+To see the library documentation, please head over to [the official documentation](https://geometr.daleal.dev) or simply run StoryBook locally. Every part of the library is documented there. For general library development documentation, continue reading this `README.md` file.
 
 ## Dependencies
 

@@ -1,5 +1,7 @@
 import type { StorybookConfig } from '@storybook/vue3-vite';
 
+export const title = 'Geometr';
+
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.tsx', '../docs/**/*.mdx'],
   addons: [
