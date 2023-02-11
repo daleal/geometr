@@ -1,5 +1,5 @@
-@use '@/styles/variables/colors' as *;
-@use '@/styles/variables/shadows' as *;
+@use "@/styles/variables/colors" as *;
+@use "@/styles/variables/shadows" as *;
 
 .g-glass {
   display: inline-block;
@@ -7,7 +7,7 @@
   padding: 0;
   border-radius: 1rem;
   background-color: rgb($background, 75%);
-	backdrop-filter: blur(1rem) saturate(180%);
+  backdrop-filter: blur(1rem) saturate(180%);
   border: 1px solid rgb($white, 12.5%);
   box-shadow: $internal-brightness;
 }

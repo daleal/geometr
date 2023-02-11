@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['stylelint-config-standard'],
+  extends: ['stylelint-config-standard-scss'],
   plugins: [
     'stylelint-scss',
   ],
@@ -26,5 +26,6 @@ module.exports = {
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': true,
     'selector-class-pattern': null,
+    'number-max-precision': null,
   },
 };
