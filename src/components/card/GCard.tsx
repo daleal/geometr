@@ -9,12 +9,18 @@ export const GCard = defineComponent({
   name: 'GCard',
   setup(props, { slots }) {
     const header = computed(() => slots.header?.());
+    const subtitle = computed(() => slots.subtitle?.());
     const content = computed(() => slots.content?.() || slots.default?.());
     useRender(() => (
       <GGlass class="g-card">
         {
           header.value && <div class="g-card__header">
             { header.value }
+          </div>
+        }
+        {
+          subtitle.value && <div class="g-card__subtitle">
+            { subtitle.value }
           </div>
         }
         {
