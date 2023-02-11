@@ -1,0 +1,14 @@
+@use "@fontsource/chakra-petch/scss/mixins" as ChakraPetch;
+
+@include ChakraPetch.fontFace(
+  $weight: 300,
+  $fontDir: "@fontsource/chakra-petch/files"
+);
+@include ChakraPetch.fontFace(
+  $weight: 400,
+  $fontDir: "@fontsource/chakra-petch/files"
+);
+@include ChakraPetch.fontFace(
+  $weight: 600,
+  $fontDir: "@fontsource/chakra-petch/files"
+);
