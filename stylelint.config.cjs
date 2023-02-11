@@ -18,7 +18,7 @@ module.exports = {
     'at-rule-empty-line-before': [
       'always',
       {
-        except: ['after-same-name'],
+        except: ['after-same-name', 'inside-block'],
         ignore: ['after-comment'],
         ignoreAtRules: ['else'],
       },

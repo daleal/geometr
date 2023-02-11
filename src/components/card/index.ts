@@ -1,0 +1,1 @@
+export { GCard } from './GCard';

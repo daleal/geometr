@@ -13,8 +13,8 @@ const meta: Meta<typeof GGlass> = {
 
 export default meta;
 
-// Base Stories
-const BaseStory: Story = {
+// Exported Stories
+export const Glass: Story = {
   render: (args) => (
     <GGlass {...args} style={{ display: 'inline-flex', 'flex-direction': 'column', color: '#7ed421' }} >
       <div style={{ padding: '15px' }}>
@@ -25,9 +25,4 @@ const BaseStory: Story = {
       </div>
     </GGlass>
   ),
-};
-
-// Exported Stories
-export const Primary: Story = {
-  ...BaseStory,
 };

@@ -1,3 +1,4 @@
-@use "@/styles/variables/colors" as *;
+@use "sass:color";
+@use "@/styles/variables/colors";
 
-$internal-brightness: inset 0 0 50px rgb($white, 3%);
+$internal-brightness: inset 0 0 50px color.change(colors.$white, $alpha: 0.03);
