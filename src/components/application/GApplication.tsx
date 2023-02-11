@@ -8,7 +8,11 @@ export const GApplication = defineComponent({
   setup(props, { slots }) {
     useRender(() => (
       <div class="g-application">
-        { slots.default?.() }
+        <div class="g-application__scroll">
+          <div class="g-application__wrapper">
+            { slots.default?.() }
+          </div>
+        </div>
       </div>
     ));
   },
