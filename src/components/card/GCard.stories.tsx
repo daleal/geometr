@@ -18,7 +18,7 @@ export default meta;
 export const DefaultProp: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
-    <GApplication style={{ padding: '1rem' }} >
+    <GApplication>
       <GCard {...args}>
         This card only has the default prop
       </GCard>
@@ -29,7 +29,7 @@ export const DefaultProp: Story = {
 export const HeaderAndContent: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
-    <GApplication style={{ padding: '1rem' }} >
+    <GApplication>
       <GCard {...args}>
         {{
           header: () => <>This is the title</>,
@@ -43,7 +43,7 @@ export const HeaderAndContent: Story = {
 export const MultipleCards: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
-    <GApplication style={{ padding: '1rem' }} >
+    <GApplication>
       {
         [...Array(12)].map((_, index) => (
           <GCard {...args} key={index} style={{ 'margin-bottom': '1rem' }} >

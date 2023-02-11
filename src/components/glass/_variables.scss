@@ -2,8 +2,8 @@
 @use "@/styles/variables/colors";
 
 // Colors
-$card-background-color: color.change(colors.$slate, $alpha: 0.55);
-$card-border-color: color.change(colors.$white, $alpha: 0.125);
+$card-background-color: color.change(colors.$slate, $alpha: 0.45);
+$card-border-color: color.change(colors.$white, $alpha: 0.08);
 
 // Shadows
-$card-internal-brightness: inset 0 0 50px color.change(colors.$white, $alpha: 0.1);
+$card-internal-brightness: inset 0 0 15px color.change(colors.$white, $alpha: 0.03);

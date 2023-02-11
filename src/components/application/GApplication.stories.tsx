@@ -17,7 +17,7 @@ export default meta;
 export const ApplicationBase: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
-    <GApplication {...args} style={{ padding: '1rem' }} >
+    <GApplication {...args} >
       This application has content
     </GApplication>
   ),

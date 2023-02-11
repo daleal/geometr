@@ -18,7 +18,7 @@ export default meta;
 export const Glass: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
-    <GApplication style={{ display: 'block', padding: '1rem' }} >
+    <GApplication style={{ display: 'block' }} >
       <GGlass {...args} style={{ display: 'inline-flex', 'flex-direction': 'column', color: '#7ed421' }} >
         <div style={{ padding: '15px' }}>
           This is a text
