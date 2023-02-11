@@ -1,14 +1,12 @@
-@use "sass:color";
-@use "@/styles/variables/colors";
-@use "@/styles/variables/shadows";
+@use "./variables";
 
 .g-glass {
   display: inline-block;
   position: relative;
   padding: 0;
   border-radius: 1rem;
-  background-color: color.change(colors.$background, $alpha: 0.75);
+  background-color: variables.$card-background-color;
   backdrop-filter: blur(1rem) saturate(180%);
-  border: 1px solid color.change(colors.$white, $alpha: 0.125);
-  box-shadow: shadows.$internal-brightness;
+  border: 1px solid variables.$card-border-color;
+  box-shadow: variables.$card-internal-brightness;
 }
