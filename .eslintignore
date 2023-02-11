@@ -1,0 +1,7 @@
+# Auto-generated stuff
+dist
+storybook-static
+node_modules
+
+# Force .storybook folder lint
+!.storybook

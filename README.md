@@ -1,44 +1,45 @@
 # Geometr
 
-## Project setup
+To see the library documentation, please head over to [the official documentation](https://geometr.daleal.dev) or simply run StoryBook locally. Every part of the library is documented there. For general library development documentation, continue reading this `README.md` file.
 
-```
-yarn install
-```
+## Dependencies
 
-### Compiles and hot-reloads for development
+To run this project, you will need [pnpm](https://pnpm.io). You can install the dependencies by running:
 
-```
-yarn dev
+```sh
+pnpm install
 ```
 
-### Compiles and minifies for production
+## StoryBook
 
-```
-yarn build
-```
+To run StoryBook, run the following command:
 
-### Run your unit tests
-
-```
-yarn test:unit
+```sh
+pnpm run storybook:dev
 ```
 
-### Lints and fixes files
+Then, open your browser on `http://localhost:6006`.
 
+## Developing with an external project
+
+To develop the library along side another external project, you can add the following entry to the `package.json` of the external project:
+
+```json
+{
+   "devDependencies": {
+      "geometr": "file:./relative/path/to/this/folder"
+   }
+}
 ```
-yarn lint
+
+Install the external project dependencies and use the library as the documentation states.
+
+## Bumping the version
+
+To bump the version before publishing, switch to the `main` branch and run the following command:
+
+```sh
+pnpm run bump! minor
 ```
 
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## Aliases
-
-Aliases need to be configured in three locations:
-
-1. `vite.config.js`: Here you can add a new entry to `resolve.alias` where the key corresponds to the alias and the value corresponds to the actual location. The value must be **an absolute path**, starting from the base of the repository.
-2. `.eslintrc.js`: Here you need to add a new element to the `settings['import/resolver'].alias.map` array, that itself corresponds to an array with two elements. The first element corresponds to the alias and the second element corresponds to the actual location. The second element must be **a relative path**, starting from the base of the repository.
-3. `tsconfig.json`: Here you need to add a new entry to `compilerOptions.paths` where the key corresponds to the alias and the value corresponds to the actual location. The value must be **a relative path**, starting from the base of the repository. Notice that here you must finish the key **and** the value with `/*` for vscode to understand you are referencing folders and autocomplete sub-folders and files.
+You can run a `patch`, `minor` or `major` bump, depending on the changes to be released.

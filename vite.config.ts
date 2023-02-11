@@ -1,15 +1,26 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), vueJsx()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src', 'main.ts'),
-      formats: ['es', 'cjs'],
-      fileName: (ext) => `index.${ext}.js`,
+      entry: [
+        resolve(__dirname, 'src', 'main.ts'),
+        resolve(__dirname, 'src', 'styles.ts'),
+      ],
+      name: 'geometr',
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+      },
     },
     sourcemap: true,
   },

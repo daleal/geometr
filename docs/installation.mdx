@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="docs/Installation" />
+
+# Installation
+
+Install using npm! (or your favourite package manager)
+
+```sh
+# Using npm
+npm install geometr
+
+# Using pnpm
+pnpm add geometr
+
+# Using yarn
+yarn add geometr
+```
+
+# Importing the styles
+
+To be able to use the library, you first need to import the styles for it to work properly. To do this, import the `geometr/styles` package into the entrypoint of your application, typically a `main.ts` file:
+
+```ts
+// main.ts
+import { createApp } from 'vue';
+import App from './App.vue';
+
+import 'geometr/styles';
+
+const app = createApp(App);
+```
+
+# Using the components
+
+To use the components, you can import them directly from the `geometr` package. An example would look like this:
+
+```html
+<script setup lang="ts">
+import { GButton } from 'geometr';
+</script>
+
+<template>
+  <GButton text="This is a button, wow" disabled />
+</template>
+```

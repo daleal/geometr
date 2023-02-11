@@ -1,0 +1,19 @@
+@use "@/styles/variables/colors";
+@use "./variables";
+
+.g-card {
+  display: block;
+  overflow: hidden;
+}
+
+.g-card__header {
+  font-size: variables.$card-header-font-size;
+  color: colors.$white;
+  padding: variables.$card-header-padding;
+}
+
+.g-card__content {
+  font-size: variables.$card-content-font-size;
+  color: colors.$white;
+  padding: variables.$card-content-padding;
+}
