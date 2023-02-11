@@ -11,8 +11,8 @@
       "import": "./dist/main.es.js"
     },
     "./styles": {
-      "require": "./dist/styles.umd.js",
-      "import": "./dist/styles.es.js"
+      "require": "./dist/style.css",
+      "import": "./dist/style.css"
     }
   },
   "sideEffects": false,
