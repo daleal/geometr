@@ -1,10 +1,9 @@
-@use "@/styles/variables/colors";
 @use "./variables";
 
 .g-card {
   display: block;
   overflow: hidden;
-  color: colors.$white;
+  color: variables.$text-color;
 }
 
 .g-card__header {
