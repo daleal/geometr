@@ -1,4 +1,3 @@
-@use "@/styles/variables/colors";
 @use "./variables";
 
 .g-application {
@@ -6,11 +5,11 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  color: colors.$white;
-  background-color: colors.$black;
+  color: variables.$text-color;
+  background-color: variables.$background-base;
   background-image:
-    radial-gradient(at 72% 33%, colors.$background-accent-1 0, transparent 49%),
-    radial-gradient(at 31% 60%, colors.$background-accent-2 0, transparent 55%);
+    radial-gradient(at 72% 33%, variables.$background-accent-1 0, transparent 49%),
+    radial-gradient(at 31% 60%, variables.$background-accent-2 0, transparent 55%);
 }
 
 .g-application__scroll {
