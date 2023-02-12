@@ -1,5 +1,9 @@
 @use "@/styles/tools";
+@use "@/styles/variables/colors";
 @use "@/styles/variables/typography";
+
+// Colors
+$text-color: colors.$gray-100;
 
 // Header
 $card-header-font-size: tools.map-deep-get(typography.$typography, "h6", "size");

@@ -1,8 +1,35 @@
-// Base colors
-$black: rgb(5 5 5);
-$slate: rgb(28 31 35);
-$white: rgb(255 255 255);
+// Black
+$black-900: hsl(0deg 0% 2%);
 
-// Semantic colors
-$background-accent-1: rgb(75 33 84 / 50%);
-$background-accent-2: rgb(26 57 81 / 80%);
+// Gray
+$gray-900: hsl(225deg 7% 11%);
+$gray-800: hsl(240deg 8% 17%);
+$gray-700: hsl(242deg 7% 25%);
+$gray-600: hsl(240deg 8% 40%);
+$gray-500: hsl(225deg 7% 60%);
+$gray-400: hsl(210deg 8% 72%);
+$gray-300: hsl(210deg 8% 85%);
+$gray-200: hsl(210deg 8% 93%);
+$gray-100: hsl(225deg 7% 98%);
+
+// Purple
+$purple-900: hsl(276deg 100% 20%);
+$purple-800: hsl(276deg 100% 33%);
+$purple-700: hsl(276deg 90% 42%);
+$purple-600: hsl(276deg 90% 56%);
+$purple-500: hsl(276deg 100% 67%);
+$purple-400: hsl(276deg 100% 73%);
+$purple-300: hsl(276deg 100% 80%);
+$purple-200: hsl(276deg 100% 87%);
+$purple-100: hsl(276deg 100% 95%);
+
+// Sky Blue
+$sky-blue-900: hsl(206deg 100% 20%);
+$sky-blue-800: hsl(206deg 100% 33%);
+$sky-blue-700: hsl(206deg 90% 42%);
+$sky-blue-600: hsl(206deg 90% 56%);
+$sky-blue-500: hsl(206deg 100% 67%);
+$sky-blue-400: hsl(206deg 100% 73%);
+$sky-blue-300: hsl(206deg 100% 80%);
+$sky-blue-200: hsl(206deg 100% 87%);
+$sky-blue-100: hsl(206deg 100% 95%);
