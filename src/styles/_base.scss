@@ -1,5 +1,5 @@
-@use "./variables/typography";
+@use "./tokens/raw/fonts";
 
 :root {
-  font-family: typography.$font-family;
+  font-family: fonts.$typeface;
 }

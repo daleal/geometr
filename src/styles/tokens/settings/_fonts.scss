@@ -1,11 +1,12 @@
-$font-family: "Chakra Petch", sans-serif;
-$typography: (
+@use "@/styles/tokens/raw/fonts";
+
+$fonts: (
   "h1": (
     "size": 6rem,
     "weight": 300,
     "line-height": 6rem,
     "letter-spacing": -0.015625em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "h2": (
@@ -13,7 +14,7 @@ $typography: (
     "weight": 300,
     "line-height": 3.75rem,
     "letter-spacing": -0.0083333333em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "h3": (
@@ -21,7 +22,7 @@ $typography: (
     "weight": 400,
     "line-height": 3.125rem,
     "letter-spacing": normal,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "h4": (
@@ -29,7 +30,7 @@ $typography: (
     "weight": 400,
     "line-height": 2.5rem,
     "letter-spacing": 0.0073529412em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "h5": (
@@ -37,7 +38,7 @@ $typography: (
     "weight": 400,
     "line-height": 2rem,
     "letter-spacing": normal,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "h6": (
@@ -45,7 +46,7 @@ $typography: (
     "weight": 600,
     "line-height": 2rem,
     "letter-spacing": 0.0125em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "subtitle-1": (
@@ -53,7 +54,7 @@ $typography: (
     "weight": normal,
     "line-height": 1.75rem,
     "letter-spacing": 0.009375em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "subtitle-2": (
@@ -61,7 +62,7 @@ $typography: (
     "weight": 600,
     "line-height": 1.375rem,
     "letter-spacing": 0.0071428571em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "body-1": (
@@ -69,7 +70,7 @@ $typography: (
     "weight": 400,
     "line-height": 1.5rem,
     "letter-spacing": 0.03125em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "body-2": (
@@ -77,7 +78,7 @@ $typography: (
     "weight": 400,
     "line-height": 1.25rem,
     "letter-spacing": 0.0178571429em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "button": (
@@ -85,7 +86,7 @@ $typography: (
     "weight": 600,
     "line-height": 2.25rem,
     "letter-spacing": 0.0892857143em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": uppercase
   ),
   "caption": (
@@ -93,7 +94,7 @@ $typography: (
     "weight": 400,
     "line-height": 1.25rem,
     "letter-spacing": 0.0333333333em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": none
   ),
   "overline": (
@@ -101,7 +102,7 @@ $typography: (
     "weight": 600,
     "line-height": 2rem,
     "letter-spacing": 0.1666666667em,
-    "font-family": $font-family,
+    "font-family": fonts.$typeface,
     "text-transform": uppercase
   )
 );
