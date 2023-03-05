@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "@/styles/variables/colors";
+@use "@/styles/tokens/raw/colors";
 
 // Colors
 $text-color: colors.$gray-100;
