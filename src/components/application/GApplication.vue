@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import './GApplication.scss';
-
 defineSlots<{
   default(props: Record<string, never>): unknown,
 }>();
@@ -18,3 +16,32 @@ defineSlots<{
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+@use "./variables";
+
+.g-application {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: variables.$text-color;
+  background-color: variables.$background-base;
+  background-image:
+    radial-gradient(at 72% 33%, variables.$background-accent-1 0, transparent 49%),
+    radial-gradient(at 31% 60%, variables.$background-accent-2 0, transparent 55%);
+}
+
+.g-application__scroll {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.g-application__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: variables.$application-padding;
+}
+</style>
