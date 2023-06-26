@@ -26,3 +26,7 @@ $card-content-font-weight: tools.map-deep-get(fonts.$fonts, "body-2", "weight");
 $card-content-letter-spacing: tools.map-deep-get(fonts.$fonts, "body-2", "letter-spacing");
 $card-content-line-height: tools.map-deep-get(fonts.$fonts, "body-2", "line-height");
 $card-content-padding: 1rem;
+
+// Actions
+$card-actions-padding: 0 1rem 1rem 1rem;
+$card-actions-gap: 0.4rem;
