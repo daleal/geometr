@@ -10,6 +10,14 @@
       "require": "./dist/main.umd.js",
       "import": "./dist/main.es.js"
     },
+    "./components": {
+      "require": "./dist/components.umd.js",
+      "import": "./dist/components.es.js"
+    },
+    "./composables": {
+      "require": "./dist/composables.umd.js",
+      "import": "./dist/composables.es.js"
+    },
     "./styles": {
       "require": "./dist/style.css",
       "import": "./dist/style.css"
