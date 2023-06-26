@@ -1,3 +1,23 @@
+<script setup lang="ts">
+defineSlots<{
+  default(props: Record<string, never>): unknown,
+}>();
+</script>
+
+<template>
+  <div class="g-application">
+    <div class="g-application__scroll">
+      <div
+        class="g-application__wrapper"
+        v-bind="$attrs"
+      >
+        <slot name="default" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
 @use "./variables";
 
 .g-application {
@@ -24,3 +44,4 @@
   flex: 1 1 auto;
   padding: variables.$application-padding;
 }
+</style>

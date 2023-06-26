@@ -1,3 +1,16 @@
+<script setup lang="ts">
+defineSlots<{
+  default(props: Record<string, never>): unknown,
+}>();
+</script>
+
+<template>
+  <div class="g-glass">
+    <slot name="default" />
+  </div>
+</template>
+
+<style scoped lang="scss">
 @use "./variables";
 
 .g-glass {
@@ -10,3 +23,4 @@
   border: 1px solid variables.$glass-border-color;
   box-shadow: variables.$glass-internal-brightness;
 }
+</style>

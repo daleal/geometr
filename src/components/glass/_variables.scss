@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "@/styles/variables/colors";
+@use "@/styles/tokens/raw/colors";
 
 // Colors
 $glass-background-color: color.change(colors.$gray-900, $alpha: 0.45);

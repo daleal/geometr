@@ -1,9 +1,9 @@
 @use "sass:color";
-@use "@/styles/variables/colors";
+@use "@/styles/tokens/raw/colors";
 
 // Colors
 $text-color: colors.$gray-100;
-$background-base: colors.$black-900;
+$background-base: colors.$gray-1000;
 $background-accent-1: color.change(colors.$purple-900, $alpha: 0.5);
 $background-accent-2: color.change(colors.$sky-blue-900, $alpha: 0.6);
 
