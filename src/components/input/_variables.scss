@@ -1,0 +1,30 @@
+@use "sass:color";
+@use "@/styles/tools";
+@use "@/styles/tokens/raw/colors";
+@use "@/styles/tokens/settings/fonts";
+
+// Complete component
+$input-text-color: colors.$gray-100;
+$input-font-size: tools.map-deep-get(fonts.$fonts, "body-1", "size");
+$input-font-weight: tools.map-deep-get(fonts.$fonts, "body-1", "weight");
+$input-letter-spacing: tools.map-deep-get(fonts.$fonts, "body-1", "letter-spacing");
+$input-line-height: tools.map-deep-get(fonts.$fonts, "body-1", "line-height");
+$input-padding: 0.5rem 1rem;
+
+// Label
+$input-label-text-color: colors.$gray-600;
+$input-label-font-size: tools.map-deep-get(fonts.$fonts, "body-2", "size");
+$input-label-font-weight: tools.map-deep-get(fonts.$fonts, "body-2", "weight");
+$input-label-letter-spacing: tools.map-deep-get(fonts.$fonts, "body-2", "letter-spacing");
+$input-label-line-height: tools.map-deep-get(fonts.$fonts, "body-2", "line-height");
+$input-label-margin-bottom: 0.3rem;
+
+// Placeholder
+$input-placeholder-text-color: colors.$gray-700;
+
+// Input
+$input-bottom-border: 1px solid color.change(colors.$gray-100, $alpha: 0.08);
+$input-bottom-extra-margin: 0.2rem;
+
+// States
+$focused-border-color: color.change(colors.$gray-100, $alpha: 0.2);
