@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { action } from '@storybook/addon-actions';
+import { GApplication } from '@/components/application';
+import { colors } from './types';
 import { GButton } from './index';
 
 // Auxiliar Types
@@ -10,6 +12,9 @@ const meta: Meta<typeof GButton> = {
   title: 'components/GButton',
   component: GButton,
   parameters: { controls: { sort: 'requiredFirst' } },
+  argTypes: {
+    color: { options: colors },
+  },
 };
 
 export default meta;
@@ -18,14 +23,53 @@ export default meta;
 const onClickAction = action('click');
 
 // Base Stories
-const BaseStory: Story = {
-  render: (args) => <GButton {...args} onClick={onClickAction} />,
-};
+const BaseStory = (slots: { default?: () => JSX.Element, icon?: () => JSX.Element }): Story => ({
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <div>
+        <GButton {...args} onClick={onClickAction}>
+          { slots }
+        </GButton>
+      </div>
+    </GApplication>
+  ),
+});
 
 // Exported Stories
-export const Primary: Story = {
-  ...BaseStory,
+export const TextOnlyPrimary: Story = {
+  ...BaseStory({
+    default: () => <>Button</>,
+  }),
   args: {
-    text: 'Button',
+    color: 'primary',
+  },
+};
+
+export const TextOnlySecondary: Story = {
+  ...BaseStory({
+    default: () => <>Button</>,
+  }),
+  args: {
+    color: 'secondary',
+  },
+};
+
+export const TextAndIcon: Story = {
+  ...BaseStory({
+    default: () => <>Button</>,
+    icon: () => <>X</>,
+  }),
+  args: {
+    color: 'primary',
+  },
+};
+
+export const IconOnly: Story = {
+  ...BaseStory({
+    icon: () => <>X</>,
+  }),
+  args: {
+    color: 'primary',
   },
 };

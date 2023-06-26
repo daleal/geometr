@@ -6,6 +6,7 @@ const slots = defineSlots<{
   header?(props: Record<string, never>): unknown,
   subtitle?(props: Record<string, never>): unknown,
   content?(props: Record<string, never>): unknown,
+  actions?(props: Record<string, never>): unknown,
 }>();
 </script>
 
@@ -35,6 +36,12 @@ const slots = defineSlots<{
         v-else
         name="default"
       />
+    </div>
+    <div
+      v-if="slots.actions"
+      class="g-card__actions"
+    >
+      <slot name="actions" />
     </div>
   </GGlass>
 </template>
@@ -71,5 +78,12 @@ const slots = defineSlots<{
   letter-spacing: variables.$card-content-letter-spacing;
   line-height: variables.$card-content-line-height;
   padding: variables.$card-content-padding;
+}
+
+.g-card__actions {
+  padding: variables.$card-actions-padding;
+  display: flex;
+  gap: variables.$card-actions-gap;
+  flex-wrap: wrap;
 }
 </style>

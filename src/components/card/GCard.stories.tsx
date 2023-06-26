@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { GApplication } from '@/components/application';
+import { GButton } from '@/components/button';
 import { GCard } from './index';
 
 // Auxiliar Types
@@ -49,6 +50,25 @@ export const HeaderSubtitleAndContent: Story = {
           header: () => <>This is the title</>,
           subtitle: () => <>This is a subtitle</>,
           content: () => <>This is the content of the card. It usually is quite large.</>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+};
+
+export const WithActions: Story = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+          subtitle: () => <>This is a subtitle</>,
+          content: () => <>This is the content of the card. It usually is quite large.</>,
+          actions: () => <>
+            <GButton color="primary">Nais</GButton>
+            <GButton color="secondary">Double Nais</GButton>
+          </>,
         }}
       </GCard>
     </GApplication>
