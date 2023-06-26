@@ -1,0 +1,13 @@
+@use "@/styles/tools";
+@use "@/styles/tokens/raw/colors";
+@use "@/styles/tokens/settings/fonts";
+
+// Colors
+$primary-color: colors.$purple-600;
+$secondary-color: colors.$sky-blue-600;
+
+// Text
+$button-font-size: tools.map-deep-get(fonts.$fonts, "button", "size");
+$button-font-weight: tools.map-deep-get(fonts.$fonts, "button", "weight");
+$button-letter-spacing: tools.map-deep-get(fonts.$fonts, "button", "letter-spacing");
+$button-line-height: tools.map-deep-get(fonts.$fonts, "button", "line-height");
