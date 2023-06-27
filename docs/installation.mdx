@@ -33,14 +33,30 @@ const app = createApp(App);
 
 # Using the components
 
-To use the components, you can import them directly from the `geometr` package. An example would look like this:
+To use the components, you can import them from the `geometr/components` section of the package. An example would look like this:
 
 ```html
 <script setup lang="ts">
-import { GButton } from 'geometr';
+import { GButton } from 'geometr/components';
 </script>
 
 <template>
-  <GButton text="This is a button, wow" disabled />
+  <GButton>This is a button, wow</GButton>
+</template>
+```
+
+# Using the composables
+
+The Geometr package includes some composables to be used alongside the components. For example, the `useModal` composable provides an `open` ref and functions to open, close and toggle the modal. You can import them from the `geometr/composables`. An example would look like this:
+
+```html
+<script setup lang="ts">
+import { useModal } from 'geometr/composables';
+
+const { opened, toggle } = useModal();
+</script>
+
+<template>
+  <GButton @click="toggle">Toggle the modal</GButton>
 </template>
 ```

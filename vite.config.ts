@@ -12,6 +12,8 @@ export default defineConfig({
     lib: {
       entry: [
         resolve(__dirname, 'src', 'main.ts'),
+        resolve(__dirname, 'src', 'components/index.ts'),
+        resolve(__dirname, 'src', 'composables/index.ts'),
         resolve(__dirname, 'src', 'styles.ts'),
       ],
       name: 'geometr',
