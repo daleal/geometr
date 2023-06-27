@@ -1,21 +1,21 @@
 {
   "name": "geometr",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
-  "main": "dist/main.umd.js",
+  "main": "dist/main.cjs.js",
   "module": "dist/main.es.js",
   "types": "dist/main.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/main.umd.js",
+      "require": "./dist/main.cjs.js",
       "import": "./dist/main.es.js"
     },
     "./components": {
-      "require": "./dist/components.umd.js",
+      "require": "./dist/components.cjs.js",
       "import": "./dist/components.es.js"
     },
     "./composables": {
-      "require": "./dist/composables.umd.js",
+      "require": "./dist/composables.cjs.js",
       "import": "./dist/composables.es.js"
     },
     "./styles": {
