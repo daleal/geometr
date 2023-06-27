@@ -1,6 +1,6 @@
 {
   "name": "geometr",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "main": "dist/main.umd.js",
   "module": "dist/main.es.js",
@@ -9,6 +9,14 @@
     ".": {
       "require": "./dist/main.umd.js",
       "import": "./dist/main.es.js"
+    },
+    "./components": {
+      "require": "./dist/components.umd.js",
+      "import": "./dist/components.es.js"
+    },
+    "./composables": {
+      "require": "./dist/composables.umd.js",
+      "import": "./dist/composables.es.js"
     },
     "./styles": {
       "require": "./dist/style.css",
@@ -52,6 +60,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/eslint-config-typescript": "^11.0.3",
+    "@vueuse/core": "^10.2.0",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -66,8 +75,8 @@
     "sass": "^1.63.6",
     "storybook": "^7.0.23",
     "stylelint": "^15.9.0",
-    "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-scss": "^4.7.0",
+    "stylelint-config-standard-scss": "^9.0.0",
+    "stylelint-scss": "^5.0.1",
     "typescript": "^4.9.5",
     "vite": "^4.3.9",
     "vue": "^3.3.4",

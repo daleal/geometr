@@ -1,0 +1,12 @@
+@use "sass:color";
+@use "@/styles/tokens/raw/colors";
+
+// Overlay
+$overlay-color: color.change(colors.$gray-900, $alpha: 0.5);
+$overlay-transition: opacity 0.3s ease;
+
+// Modal
+$modal-margin: 3rem;
+$modal-padding: 1.5rem 2rem;
+$modal-text-color: colors.$gray-100;
+$modal-transition: all 0.3s ease;
