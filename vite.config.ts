@@ -10,13 +10,13 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: [
-        resolve(__dirname, 'src', 'main.ts'),
-        resolve(__dirname, 'src', 'components/index.ts'),
-        resolve(__dirname, 'src', 'composables/index.ts'),
-        resolve(__dirname, 'src', 'styles.ts'),
-      ],
       name: 'geometr',
+      entry: {
+        main: resolve(__dirname, 'src', 'main.ts'),
+        components: resolve(__dirname, 'src', 'components', 'index.ts'),
+        composables: resolve(__dirname, 'src', 'composables', 'index.ts'),
+        styles: resolve(__dirname, 'src', 'styles.ts'),
+      },
       fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
