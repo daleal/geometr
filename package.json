@@ -2,31 +2,40 @@
   "name": "geometr",
   "version": "0.3.1",
   "type": "module",
-  "main": "dist/main.cjs.js",
-  "module": "dist/main.es.js",
-  "types": "dist/main.d.ts",
+  "main": "./dist/main.cjs.js",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/main.cjs.js",
-      "import": "./dist/main.es.js"
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.es.js",
+      "require": "./dist/main.cjs.js"
     },
     "./components": {
-      "require": "./dist/components.cjs.js",
-      "import": "./dist/components.es.js"
+      "types": "./dist/components/main.d.ts",
+      "import": "./dist/components/main.es.js",
+      "require": "./dist/components/main.cjs.js"
     },
     "./composables": {
-      "require": "./dist/composables.cjs.js",
-      "import": "./dist/composables.es.js"
+      "types": "./dist/composables/main.d.ts",
+      "import": "./dist/composables/main.es.js",
+      "require": "./dist/composables/main.cjs.js"
     },
     "./styles": {
-      "require": "./dist/style.css",
-      "import": "./dist/style.css"
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["dist/main.d.ts"],
+      "components": ["dist/components/main.d.ts"],
+      "composables": ["dist/composables/main.d.ts"]
     }
   },
   "sideEffects": false,
   "scripts": {
     "bump!": "sh scripts/bump.sh",
-    "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "build": "vite build",
     "lint:eslint": "eslint --ext .js,.ts,.tsx,.vue .",
     "lint:stylelint": "stylelint **/*.{css,scss,vue}",
     "storybook:dev": "storybook dev -p 6006",
@@ -79,6 +88,7 @@
     "stylelint-scss": "^5.0.1",
     "typescript": "^4.9.5",
     "vite": "^4.3.9",
+    "vite-plugin-dts": "^3.3.1",
     "vue": "^3.3.4",
     "vue-tsc": "^1.8.1"
   },
