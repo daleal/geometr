@@ -1,2 +1,2 @@
-export * from './components';
-export * from './composables';
+export * from './components/main';
+export * from './composables/main';
