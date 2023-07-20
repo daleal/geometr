@@ -21,6 +21,7 @@ export default defineConfig({
         main: resolve(__dirname, 'src', 'main.ts'),
         'components/main': resolve(__dirname, 'src', 'components', 'main.ts'),
         'composables/main': resolve(__dirname, 'src', 'composables', 'main.ts'),
+        style: resolve(__dirname, 'src', 'styles.ts'),
       },
       fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
