@@ -27,5 +27,6 @@ module.exports = {
     'scss/at-rule-no-unknown': true,
     'selector-class-pattern': null,
     'number-max-precision': null,
+    'value-keyword-case': ['lower', { ignoreFunctions: ['v-bind'] }],
   },
 };
