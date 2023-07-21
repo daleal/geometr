@@ -6,16 +6,16 @@ import { GSeparator } from './index';
 type Story = StoryObj<typeof GSeparator>;
 
 // Meta
-const meta: Meta<typeof GSeparator> = {
+const meta = {
   title: 'components/GSeparator',
   component: GSeparator,
   parameters: { controls: { sort: 'requiredFirst' } },
-};
+} satisfies Meta<typeof GSeparator>;
 
 export default meta;
 
 // Base Stories
-const BaseStory = (height: number): Story => ({
+const BaseStory = (height: number) => ({
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -24,10 +24,10 @@ const BaseStory = (height: number): Story => ({
       <div>This is some more text!</div>
     </GApplication>
   ),
-});
+} satisfies Story);
 
 // Exported Stories
-export const NoSeparator: Story = {
+export const NoSeparator = {
   parameters: { layout: 'fullscreen' },
   render: () => (
     <GApplication>
@@ -35,9 +35,9 @@ export const NoSeparator: Story = {
       <div>This is some more text!</div>
     </GApplication>
   ),
-};
-export const OneSeparator: Story = BaseStory(1);
-export const TwoSeparator: Story = BaseStory(2);
-export const ThreeSeparator: Story = BaseStory(3);
-export const FourSeparator: Story = BaseStory(4);
-export const TenSeparator: Story = BaseStory(10);
+} satisfies Story;
+export const OneSeparator = BaseStory(1) satisfies Story;
+export const TwoSeparator = BaseStory(2) satisfies Story;
+export const ThreeSeparator = BaseStory(3) satisfies Story;
+export const FourSeparator = BaseStory(4) satisfies Story;
+export const TenSeparator = BaseStory(10) satisfies Story;

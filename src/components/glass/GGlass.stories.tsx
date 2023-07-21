@@ -6,16 +6,16 @@ import { GGlass } from './index';
 type Story = StoryObj<typeof GGlass>;
 
 // Meta
-const meta: Meta<typeof GGlass> = {
+const meta = {
   title: 'components/GGlass',
   component: GGlass,
   parameters: { controls: { sort: 'requiredFirst' } },
-};
+} satisfies Meta<typeof GGlass>;
 
 export default meta;
 
 // Exported Stories
-export const Glass: Story = {
+export const Glass = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication style={{ display: 'block' }} >
@@ -29,4 +29,4 @@ export const Glass: Story = {
       </GGlass>
     </GApplication>
   ),
-};
+} satisfies Story;
