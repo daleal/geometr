@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { GGlass } from '@/components/glass';
+import { GSeparator } from '@/components/separator';
 
 const slots = defineSlots<{
   default?(props: Record<string, never>): unknown,
@@ -13,30 +14,37 @@ const slots = defineSlots<{
 <template>
   <GGlass class="g-card">
     <div
-      v-if="slots.header"
-      class="g-card__header"
+      v-if="slots.header || slots.subtitle || slots.default || slots.content"
+      class="g-card__body"
     >
-      <slot name="header" />
+      <div
+        v-if="slots.header"
+        class="g-card__header"
+      >
+        <slot name="header" />
+      </div>
+      <div
+        v-if="slots.subtitle"
+        class="g-card__subtitle"
+      >
+        <slot name="subtitle" />
+      </div>
+      <GSeparator v-if="(slots.header || slots.subtitle) && (slots.default || slots.content)" />
+      <div
+        v-if="slots.default || slots.content"
+        class="g-card__content"
+      >
+        <slot
+          v-if="slots.content"
+          name="content"
+        />
+        <slot
+          v-else
+          name="default"
+        />
+      </div>
     </div>
-    <div
-      v-if="slots.subtitle"
-      class="g-card__subtitle"
-    >
-      <slot name="subtitle" />
-    </div>
-    <div
-      v-if="slots.default || slots.content"
-      class="g-card__content"
-    >
-      <slot
-        v-if="slots.content"
-        name="content"
-      />
-      <slot
-        v-else
-        name="default"
-      />
-    </div>
+    <GSeparator v-if="!(slots.header || slots.subtitle || slots.default || slots.content)" />
     <div
       v-if="slots.actions"
       class="g-card__actions"
@@ -55,12 +63,15 @@ const slots = defineSlots<{
   color: variables.$text-color;
 }
 
+.g-card__body {
+  padding: variables.$card-body-padding;
+}
+
 .g-card__header {
   font-size: variables.$card-header-font-size;
   font-weight: variables.$card-header-font-weight;
   letter-spacing: variables.$card-header-letter-spacing;
   line-height: variables.$card-header-line-height;
-  padding: variables.$card-header-padding;
 }
 
 .g-card__subtitle {
@@ -69,7 +80,6 @@ const slots = defineSlots<{
   letter-spacing: variables.$card-subtitle-letter-spacing;
   line-height: variables.$card-subtitle-line-height;
   opacity: variables.$card-subtitle-opacity;
-  padding: variables.$card-subtitle-padding;
 }
 
 .g-card__content {
@@ -77,7 +87,6 @@ const slots = defineSlots<{
   font-weight: variables.$card-content-font-weight;
   letter-spacing: variables.$card-content-letter-spacing;
   line-height: variables.$card-content-line-height;
-  padding: variables.$card-content-padding;
 }
 
 .g-card__actions {
