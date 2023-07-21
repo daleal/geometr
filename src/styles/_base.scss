@@ -1,5 +1,10 @@
+@use "./tokens/raw/colors";
 @use "./tokens/raw/fonts";
 
 :root {
   font-family: fonts.$typeface;
+}
+
+body {
+  background-color: colors.$gray-1000;
 }
