@@ -41,6 +41,33 @@ export const HeaderAndContent: Story = {
   ),
 };
 
+export const OnlyHeader: Story = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+};
+
+export const HeaderAndSubtitle: Story = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+          subtitle: () => <>This is a subtitle</>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+};
+
 export const HeaderSubtitleAndContent: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
@@ -56,7 +83,25 @@ export const HeaderSubtitleAndContent: Story = {
   ),
 };
 
-export const WithActions: Story = {
+export const HeaderSubtitleAndActions: Story = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+          subtitle: () => <>This is a subtitle</>,
+          actions: () => <>
+            <GButton color="primary">Nais</GButton>
+            <GButton color="secondary">Double Nais</GButton>
+          </>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+};
+
+export const HeaderSubtitleContentAndActions: Story = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -65,6 +110,22 @@ export const WithActions: Story = {
           header: () => <>This is the title</>,
           subtitle: () => <>This is a subtitle</>,
           content: () => <>This is the content of the card. It usually is quite large.</>,
+          actions: () => <>
+            <GButton color="primary">Nais</GButton>
+            <GButton color="secondary">Double Nais</GButton>
+          </>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+};
+
+export const OnlyActions: Story = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
           actions: () => <>
             <GButton color="primary">Nais</GButton>
             <GButton color="secondary">Double Nais</GButton>

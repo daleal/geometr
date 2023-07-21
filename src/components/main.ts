@@ -4,3 +4,4 @@ export * from './card';
 export * from './glass';
 export * from './input';
 export * from './modal';
+export * from './separator';
