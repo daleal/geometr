@@ -1,6 +1,6 @@
 {
   "name": "geometr",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "type": "module",
   "main": "./dist/main.cjs.js",
   "module": "./dist/main.es.js",
@@ -29,9 +29,15 @@
   },
   "typesVersions": {
     "*": {
-      "*": ["dist/main.d.ts"],
-      "components": ["dist/components/main.d.ts"],
-      "composables": ["dist/composables/main.d.ts"]
+      "*": [
+        "dist/main.d.ts"
+      ],
+      "components": [
+        "dist/components/main.d.ts"
+      ],
+      "composables": [
+        "dist/composables/main.d.ts"
+      ]
     }
   },
   "sideEffects": false,
