@@ -8,16 +8,16 @@ import { GModal } from './index';
 type Story = StoryObj<typeof GModal>;
 
 // Meta
-const meta: Meta<typeof GModal> = {
+const meta = {
   title: 'components/GModal',
   component: GModal,
   parameters: { controls: { sort: 'requiredFirst' } },
-};
+} satisfies Meta<typeof GModal>;
 
 export default meta;
 
 // Base Stories
-const BaseStory = (slots: { default?: () => JSX.Element }): Story => ({
+const BaseStory = (slots: { default?: () => JSX.Element }) => ({
   parameters: { layout: 'fullscreen' },
   render: (args) => {
     const { opened, open } = useModal();
@@ -35,11 +35,11 @@ const BaseStory = (slots: { default?: () => JSX.Element }): Story => ({
       </GApplication>
     );
   },
-});
+} satisfies Story);
 
 // Exported Stories
-export const ModalWithContent: Story = {
+export const ModalWithContent = {
   ...BaseStory({
     default: () => <>This is a modal!</>,
   }),
-};
+} satisfies Story;
