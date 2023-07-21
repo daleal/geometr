@@ -15,3 +15,7 @@
 ## Fixes 🐛
 
 - Include here what was fixed with this version.
+
+## Maintenance ⚙️
+
+- Include here what maintenance chores were executed with this version.
