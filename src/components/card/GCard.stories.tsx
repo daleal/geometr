@@ -7,16 +7,16 @@ import { GCard } from './index';
 type Story = StoryObj<typeof GCard>;
 
 // Meta
-const meta: Meta<typeof GCard> = {
+const meta = {
   title: 'components/GCard',
   component: GCard,
   parameters: { controls: { sort: 'requiredFirst' } },
-};
+} satisfies Meta<typeof GCard>;
 
 export default meta;
 
 // Exported Stories
-export const DefaultProp: Story = {
+export const DefaultProp = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -25,9 +25,9 @@ export const DefaultProp: Story = {
       </GCard>
     </GApplication>
   ),
-};
+} satisfies Story;
 
-export const HeaderAndContent: Story = {
+export const HeaderAndContent = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -39,9 +39,36 @@ export const HeaderAndContent: Story = {
       </GCard>
     </GApplication>
   ),
-};
+} satisfies Story;
 
-export const HeaderSubtitleAndContent: Story = {
+export const OnlyHeader = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+} satisfies Story;
+
+export const HeaderAndSubtitle = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+          subtitle: () => <>This is a subtitle</>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+} satisfies Story;
+
+export const HeaderSubtitleAndContent = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -54,9 +81,27 @@ export const HeaderSubtitleAndContent: Story = {
       </GCard>
     </GApplication>
   ),
-};
+} satisfies Story;
 
-export const WithActions: Story = {
+export const HeaderSubtitleAndActions = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          header: () => <>This is the title</>,
+          subtitle: () => <>This is a subtitle</>,
+          actions: () => <>
+            <GButton color="primary">Nais</GButton>
+            <GButton color="secondary">Double Nais</GButton>
+          </>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+} satisfies Story;
+
+export const HeaderSubtitleContentAndActions = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -73,9 +118,25 @@ export const WithActions: Story = {
       </GCard>
     </GApplication>
   ),
-};
+} satisfies Story;
 
-export const MultipleCards: Story = {
+export const OnlyActions = {
+  parameters: { layout: 'fullscreen' },
+  render: (args) => (
+    <GApplication>
+      <GCard {...args}>
+        {{
+          actions: () => <>
+            <GButton color="primary">Nais</GButton>
+            <GButton color="secondary">Double Nais</GButton>
+          </>,
+        }}
+      </GCard>
+    </GApplication>
+  ),
+} satisfies Story;
+
+export const MultipleCards = {
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -91,4 +152,4 @@ export const MultipleCards: Story = {
       }
     </GApplication>
   ),
-};
+} satisfies Story;

@@ -8,14 +8,14 @@ import { GButton } from './index';
 type Story = StoryObj<typeof GButton>;
 
 // Meta
-const meta: Meta<typeof GButton> = {
+const meta = {
   title: 'components/GButton',
   component: GButton,
   parameters: { controls: { sort: 'requiredFirst' } },
   argTypes: {
     color: { options: colors },
   },
-};
+} satisfies Meta<typeof GButton>;
 
 export default meta;
 
@@ -23,7 +23,7 @@ export default meta;
 const onClickAction = action('click');
 
 // Base Stories
-const BaseStory = (slots: { default?: () => JSX.Element, icon?: () => JSX.Element }): Story => ({
+const BaseStory = (slots: { default?: () => JSX.Element, icon?: () => JSX.Element }) => ({
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
@@ -34,28 +34,28 @@ const BaseStory = (slots: { default?: () => JSX.Element, icon?: () => JSX.Elemen
       </div>
     </GApplication>
   ),
-});
+} satisfies Story);
 
 // Exported Stories
-export const TextOnlyPrimary: Story = {
+export const TextOnlyPrimary = {
   ...BaseStory({
     default: () => <>Button</>,
   }),
   args: {
     color: 'primary',
   },
-};
+} satisfies Story;
 
-export const TextOnlySecondary: Story = {
+export const TextOnlySecondary = {
   ...BaseStory({
     default: () => <>Button</>,
   }),
   args: {
     color: 'secondary',
   },
-};
+} satisfies Story;
 
-export const TextAndIcon: Story = {
+export const TextAndIcon = {
   ...BaseStory({
     default: () => <>Button</>,
     icon: () => <>X</>,
@@ -63,13 +63,13 @@ export const TextAndIcon: Story = {
   args: {
     color: 'primary',
   },
-};
+} satisfies Story;
 
-export const IconOnly: Story = {
+export const IconOnly = {
   ...BaseStory({
     icon: () => <>X</>,
   }),
   args: {
     color: 'primary',
   },
-};
+} satisfies Story;

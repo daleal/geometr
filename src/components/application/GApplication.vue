@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { useViewHeight } from '@/composables/viewHeight';
+
 defineSlots<{
   default(props: Record<string, never>): unknown,
 }>();
+
+const { viewHeight } = useViewHeight();
 </script>
 
 <template>
@@ -23,7 +27,7 @@ defineSlots<{
 .g-application {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: v-bind(viewHeight);
   overflow: hidden;
   color: variables.$text-color;
   background-color: variables.$background-base;
