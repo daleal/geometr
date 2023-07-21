@@ -60,19 +60,19 @@ const type = computed(() => {
 }
 
 .g-button__text-wrapper {
-  padding: 0 1.5em;
+  padding: 0 0.75rem;
 }
 
 .g-button__icon-wrapper {
-  padding: 0 0.3em;
+  padding: 0 0.3rem;
 }
 
 .g-button__text-icon-wrapper {
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 .padding-right {
-  padding-right: 0.7em;
+  padding-right: 0.7rem;
 }
 
 .color-primary {
