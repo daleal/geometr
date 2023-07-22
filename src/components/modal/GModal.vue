@@ -95,12 +95,19 @@ onClickOutside(modalRef, () => {
 }
 
 .g-modal__modal {
-  margin: variables.$modal-margin;
+  margin: auto;
   max-height: calc(100% - #{variables.$modal-margin * 2});
-  width: calc(100% - #{variables.$modal-margin * 2});
+  min-width: variables.$modal-min-width;
   max-width: calc(100% - #{variables.$modal-margin * 2});
   color: variables.$modal-text-color;
   transition: variables.$modal-transition;
+}
+
+@media only screen and (width >= 600px) {
+  .g-modal__modal {
+    min-width: calc(100% - #{variables.$modal-mobile-margin * 2});
+    max-width: calc(100% - #{variables.$modal-mobile-margin * 2});
+  }
 }
 
 .g-modal__header {
@@ -112,6 +119,10 @@ onClickOutside(modalRef, () => {
   line-height: variables.$modal-header-line-height;
   padding: variables.$modal-header-padding;
   border-bottom: variables.$modal-header-border-bottom;
+}
+
+.g-modal__header--title {
+  margin-right: 1rem;
 }
 
 .g-modal__header--close {
