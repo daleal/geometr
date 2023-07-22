@@ -1,5 +1,7 @@
 @use "sass:color";
+@use "@/styles/tools";
 @use "@/styles/tokens/raw/colors";
+@use "@/styles/tokens/settings/fonts";
 
 // Overlay
 $overlay-color: color.change(colors.$gray-900, $alpha: 0.5);
@@ -7,6 +9,16 @@ $overlay-transition: opacity 0.3s ease;
 
 // Modal
 $modal-margin: 3rem;
-$modal-padding: 1.5rem 2rem;
 $modal-text-color: colors.$gray-100;
 $modal-transition: all 0.3s ease;
+
+// Header
+$modal-header-padding: 0.3rem 2rem;
+$modal-header-border-bottom: 1px solid colors.$gray-700;
+$modal-header-font-size: tools.map-deep-get(fonts.$fonts, "h6", "size");
+$modal-header-font-weight: tools.map-deep-get(fonts.$fonts, "h6", "weight");
+$modal-header-letter-spacing: tools.map-deep-get(fonts.$fonts, "h6", "letter-spacing");
+$modal-header-line-height: tools.map-deep-get(fonts.$fonts, "h6", "line-height");
+
+// Content
+$modal-content-padding: 1.5rem 2rem;
