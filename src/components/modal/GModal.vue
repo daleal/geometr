@@ -103,7 +103,7 @@ onClickOutside(modalRef, () => {
   transition: variables.$modal-transition;
 }
 
-@media only screen and (width >= 600px) {
+@media only screen and (width <= 600px) {
   .g-modal__modal {
     min-width: calc(100% - #{variables.$modal-mobile-margin * 2});
     max-width: calc(100% - #{variables.$modal-mobile-margin * 2});
