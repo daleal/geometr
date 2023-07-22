@@ -58,7 +58,7 @@ export const TextOnlySecondary = {
 export const TextAndIcon = {
   ...BaseStory({
     default: () => <>Button</>,
-    icon: () => <>X</>,
+    icon: () => <span class="mdi mdi-close-thick" />,
   }),
   args: {
     color: 'primary',
@@ -67,7 +67,7 @@ export const TextAndIcon = {
 
 export const IconOnly = {
   ...BaseStory({
-    icon: () => <>X</>,
+    icon: () => <span class="mdi mdi-close-thick" />,
   }),
   args: {
     color: 'primary',

@@ -34,7 +34,7 @@ const type = computed(() => {
     @click="emit('click')"
   >
     <span
-      :class="`g-button__${type}-wrapper`"
+      :class="`g-button__wrapper g-button__${type}-wrapper`"
     >
       <span
         v-if="slots.icon"
@@ -68,11 +68,11 @@ const type = computed(() => {
 }
 
 .g-button__text-icon-wrapper {
-  padding: 0 1rem;
+  padding: 0 0.75rem;
 }
 
 .padding-right {
-  padding-right: 0.7rem;
+  padding-right: 0.4rem;
 }
 
 .color-primary {

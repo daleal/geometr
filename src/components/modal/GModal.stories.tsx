@@ -17,7 +17,7 @@ const meta = {
 export default meta;
 
 // Base Stories
-const BaseStory = (slots: { default?: () => JSX.Element }) => ({
+const BaseStory = (slots: { default: () => JSX.Element, title?: () => JSX.Element }) => ({
   parameters: { layout: 'fullscreen' },
   render: (args) => {
     const { opened, open } = useModal();
@@ -40,6 +40,16 @@ const BaseStory = (slots: { default?: () => JSX.Element }) => ({
 // Exported Stories
 export const ModalWithContent = {
   ...BaseStory({
+    title: () => <>Some Title</>,
     default: () => <>This is a modal!</>,
   }),
+} satisfies Story;
+
+export const PersistentModalWithContent = {
+  ...BaseStory({
+    default: () => <>This is a modal!</>,
+  }),
+  args: {
+    persistent: true,
+  },
 } satisfies Story;

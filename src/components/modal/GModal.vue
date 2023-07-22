@@ -4,15 +4,28 @@ import { onClickOutside } from '@vueuse/core';
 import { GGlass } from '@/components/glass';
 
 defineSlots<{
+  title?(props: Record<string, never>): unknown,
   default(props: Record<string, never>): unknown,
 }>();
+
+const props = withDefaults(defineProps<{
+  persistent?: boolean,
+}>(), {
+  persistent: false,
+});
 
 const opened = defineModel<boolean>({ required: true });
 
 const modalRef = ref<HTMLElement | null>(null);
 
-onClickOutside(modalRef, () => {
+const closeModal = () => {
   opened.value = false;
+};
+
+onClickOutside(modalRef, () => {
+  if (!props.persistent) {
+    closeModal();
+  }
 });
 </script>
 
@@ -29,7 +42,23 @@ onClickOutside(modalRef, () => {
               ref="modalRef"
               class="g-modal__modal"
             >
-              <slot name="default" />
+              <div
+                v-if="!props.persistent"
+                class="g-modal__header"
+              >
+                <div class="g-modal__header--title">
+                  <slot name="title" />
+                </div>
+                <div
+                  class="g-modal__header--close"
+                  @click="closeModal"
+                >
+                  <span class="mdi mdi-window-close" />
+                </div>
+              </div>
+              <div class="g-modal__content">
+                <slot name="default" />
+              </div>
             </GGlass>
           </div>
         </div>
@@ -67,12 +96,32 @@ onClickOutside(modalRef, () => {
 
 .g-modal__modal {
   margin: variables.$modal-margin;
-  padding: variables.$modal-padding;
   max-height: calc(100% - #{variables.$modal-margin * 2});
   width: calc(100% - #{variables.$modal-margin * 2});
   max-width: calc(100% - #{variables.$modal-margin * 2});
   color: variables.$modal-text-color;
   transition: variables.$modal-transition;
+}
+
+.g-modal__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: variables.$modal-header-font-size;
+  font-weight: variables.$modal-header-font-weight;
+  letter-spacing: variables.$modal-header-letter-spacing;
+  line-height: variables.$modal-header-line-height;
+  padding: variables.$modal-header-padding;
+  border-bottom: variables.$modal-header-border-bottom;
+}
+
+.g-modal__header--close {
+  display: inline-block;
+  padding: 0 0.1rem;
+  cursor: pointer;
+}
+
+.g-modal__content {
+  padding: variables.$modal-content-padding;
   overflow-x: hidden;
   overflow-y: auto;
 }
