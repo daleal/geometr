@@ -81,6 +81,7 @@ const focusInput = () => {
 }
 
 .g-input__input:focus {
+  outline: none;
   border-bottom-color: variables.$focused-border-color;
 }
 </style>
