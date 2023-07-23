@@ -25,7 +25,7 @@ const { viewHeight } = useViewHeight();
 @use "./variables";
 
 .g-application {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: v-bind(viewHeight);
   overflow: hidden;
