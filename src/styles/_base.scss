@@ -1,10 +1,14 @@
 @use "./tokens/raw/colors";
 @use "./tokens/raw/fonts";
+@use "@/components/application/variables" as application;
 
 :root {
   font-family: fonts.$typeface;
 }
 
 body {
-  background-color: colors.$gray-1000;
+  background-color: application.$background-base;
+  background-image:
+    radial-gradient(at 72% 33%, application.$background-accent-1 0, transparent 49%),
+    radial-gradient(at 31% 60%, application.$background-accent-2 0, transparent 55%);
 }

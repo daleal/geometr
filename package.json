@@ -1,6 +1,6 @@
 {
   "name": "geometr",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "type": "module",
   "main": "./dist/main.cjs.js",
   "module": "./dist/main.es.js",
