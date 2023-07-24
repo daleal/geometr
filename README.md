@@ -1,5 +1,7 @@
 # Geometr
 
+**Warning**: This UI library is under initial development, so minor updated **may** break the application. Every breaking change will be listed on its [release notes](https://github.com/daleal/geometr/releases) under the "_Breaking Changes ❌_" title.
+
 To see the library documentation, please head over to [the official documentation](https://geometr.daleal.dev) or simply run StoryBook locally. Every part of the library is documented there. For general library development documentation, continue reading this `README.md` file.
 
 ## Dependencies
@@ -19,6 +21,10 @@ pnpm run storybook:dev
 ```
 
 Then, open your browser on `http://localhost:6006`.
+
+## Using the Playground
+
+You can visually test your components by using the Playground provided by this project. On a new terminal, `cd` into `playground`, run `pnpm install --frozen-lockfile` and use `pnpm run dev` to start the Playground. You can learn more about this development aid by reading [its `README.md` file](./playground/README.md).
 
 ## Developing with an external project
 

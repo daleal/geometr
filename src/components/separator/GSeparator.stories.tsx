@@ -16,7 +16,6 @@ export default meta;
 
 // Base Stories
 const BaseStory = (height: number) => ({
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <div>This is some text!</div>
@@ -28,7 +27,6 @@ const BaseStory = (height: number) => ({
 
 // Exported Stories
 export const NoSeparator = {
-  parameters: { layout: 'fullscreen' },
   render: () => (
     <GApplication>
       <div>This is some text!</div>
