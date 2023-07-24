@@ -1,22 +1,19 @@
 @use "./tokens/raw/colors";
 @use "./tokens/raw/fonts";
-@use "@/components/application/variables" as application;
+@use "./globals";
 
 :root {
   font-family: fonts.$typeface;
 }
 
-body {
-  background-color: application.$background-base;
-  background-image:
-    radial-gradient(at 72% 33%, application.$background-accent-1 0, transparent 49%),
-    radial-gradient(at 31% 60%, application.$background-accent-2 0, transparent 55%);
+.g-body {
+  overflow: hidden;
 
   a {
-    color: application.$link-color;
+    color: globals.$links-color;
 
     &:visited {
-      color: application.$link-visited-color;
+      color: globals.$links-visited-color;
     }
   }
 }

@@ -1,5 +1,7 @@
 # Geometr
 
+**Warning**: This UI library is under initial development, so minor updated **may** break the application. Every breaking change will be listed on its [release notes](https://github.com/daleal/geometr/releases) under the "_Breaking Changes ❌_" title.
+
 To see the library documentation, please head over to [the official documentation](https://geometr.daleal.dev) or simply run StoryBook locally. Every part of the library is documented there. For general library development documentation, continue reading this `README.md` file.
 
 ## Dependencies

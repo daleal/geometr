@@ -16,7 +16,6 @@ export default meta;
 
 // Base Stories
 const BaseStory = () => ({
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication style={{ display: 'block' }} >
       <GGlass {...args} style={{ display: 'inline-flex', 'flex-direction': 'column', color: '#7ed421' }} >

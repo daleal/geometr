@@ -16,7 +16,6 @@ export default meta;
 
 // Base Stories
 const Base = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <div>

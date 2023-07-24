@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useCustomBodyClass } from '@/composables/customBodyClass';
 import { useViewHeight } from '@/composables/viewHeight';
 import { GGlass } from '@/components/glass';
 
@@ -7,6 +8,7 @@ const slots = defineSlots<{
   footer?(props: Record<string, never>): unknown,
 }>();
 
+useCustomBodyClass();
 const { viewHeight } = useViewHeight();
 </script>
 
@@ -35,7 +37,7 @@ const { viewHeight } = useViewHeight();
 @use "./variables";
 
 .g-application {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: v-bind(viewHeight);
   overflow: hidden;
