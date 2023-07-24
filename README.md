@@ -20,6 +20,10 @@ pnpm run storybook:dev
 
 Then, open your browser on `http://localhost:6006`.
 
+## Using the Playground
+
+You can visually test your components by using the Playground provided by this project. On a new terminal, `cd` into `playground`, run `pnpm ci` and use `pnpm run dev` to start the Playground. You can learn more about this development aid by reading [its `README.md` file](./playground/README.md).
+
 ## Developing with an external project
 
 To develop the library along side another external project, you can add the following entry to the `package.json` of the external project:
