@@ -9,7 +9,7 @@ Inside the `src` sub-folder you will find a `GPlayground.template.vue` file. Cop
 To start the Playground, first install the dependencies:
 
 ```sh
-pnpm ci
+pnpm install --frozen-lockfile
 ```
 
 Make sure the `src/GPlayground.vue` component exists. If it doesn't, create it by running the following code snippet:
