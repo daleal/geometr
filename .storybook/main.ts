@@ -1,8 +1,6 @@
 import type { StorybookConfig } from '@storybook/vue3-vite';
 
-export const title = 'Geometr';
-
-const config: StorybookConfig = {
+export default {
   stories: ['../src/**/*.stories.tsx', '../docs/**/*.mdx'],
   addons: [
     '@storybook/addon-links',
@@ -12,12 +10,13 @@ const config: StorybookConfig = {
     name: '@storybook/vue3-vite',
     options: {},
   },
+  core: {
+    disableTelemetry: true,
+  },
   typescript: {
     check: false,
   },
   docs: {
     autodocs: true,
   },
-};
-
-export default config;
+} satisfies StorybookConfig;

@@ -24,7 +24,6 @@ const onClickAction = action('click');
 
 // Base Stories
 const BaseStory = (slots: { default?: () => JSX.Element, icon?: () => JSX.Element }) => ({
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <div>

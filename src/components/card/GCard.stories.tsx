@@ -17,7 +17,6 @@ export default meta;
 
 // Exported Stories
 export const DefaultProp = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -28,7 +27,6 @@ export const DefaultProp = {
 } satisfies Story;
 
 export const HeaderAndContent = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -42,7 +40,6 @@ export const HeaderAndContent = {
 } satisfies Story;
 
 export const OnlyHeader = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -55,7 +52,6 @@ export const OnlyHeader = {
 } satisfies Story;
 
 export const HeaderAndSubtitle = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -69,7 +65,6 @@ export const HeaderAndSubtitle = {
 } satisfies Story;
 
 export const HeaderSubtitleAndContent = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -84,7 +79,6 @@ export const HeaderSubtitleAndContent = {
 } satisfies Story;
 
 export const HeaderSubtitleAndActions = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -102,7 +96,6 @@ export const HeaderSubtitleAndActions = {
 } satisfies Story;
 
 export const HeaderSubtitleContentAndActions = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -121,7 +114,6 @@ export const HeaderSubtitleContentAndActions = {
 } satisfies Story;
 
 export const OnlyActions = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       <GCard {...args}>
@@ -137,7 +129,6 @@ export const OnlyActions = {
 } satisfies Story;
 
 export const MultipleCards = {
-  parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication>
       {

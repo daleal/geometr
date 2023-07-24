@@ -18,7 +18,6 @@ export default meta;
 
 // Base Stories
 const BaseStory = (slots: { default: () => JSX.Element, title?: () => JSX.Element }) => ({
-  parameters: { layout: 'fullscreen' },
   render: (args) => {
     const { opened, open } = useModal();
 

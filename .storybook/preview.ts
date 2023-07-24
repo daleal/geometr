@@ -1,7 +1,10 @@
+import type { Preview } from '@storybook/vue3';
+
 import '@/styles';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  layout: 'fullscreen',
   options: {
     storySort: {
       order: ['docs', ['Installation'], 'components'],
@@ -13,4 +16,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-};
+} satisfies Preview['parameters'];
