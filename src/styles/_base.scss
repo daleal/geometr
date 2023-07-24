@@ -11,4 +11,12 @@ body {
   background-image:
     radial-gradient(at 72% 33%, application.$background-accent-1 0, transparent 49%),
     radial-gradient(at 31% 60%, application.$background-accent-2 0, transparent 55%);
+
+  a {
+    color: application.$link-color;
+
+    &:visited {
+      color: application.$link-visited-color;
+    }
+  }
 }

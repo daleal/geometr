@@ -14,8 +14,8 @@ const meta = {
 
 export default meta;
 
-// Exported Stories
-export const Glass = {
+// Base Stories
+const BaseStory = () => ({
   parameters: { layout: 'fullscreen' },
   render: (args) => (
     <GApplication style={{ display: 'block' }} >
@@ -29,4 +29,19 @@ export const Glass = {
       </GGlass>
     </GApplication>
   ),
+} satisfies Story);
+
+// Exported Stories
+export const Glass = {
+  ...BaseStory(),
+  args: {
+    borderRadius: 1,
+  },
 } satisfies Story;
+
+export const SquaredGlass = {
+  ...BaseStory(),
+  args: {
+    borderRadius: 0,
+  },
+};

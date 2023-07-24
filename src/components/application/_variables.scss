@@ -6,6 +6,12 @@ $text-color: colors.$gray-100;
 $background-base: colors.$gray-1000;
 $background-accent-1: color.change(colors.$purple-900, $alpha: 0.5);
 $background-accent-2: color.change(colors.$sky-blue-900, $alpha: 0.6);
+$link-color: colors.$sky-blue-600;
+$link-visited-color: colors.$sky-blue-700;
 
 // Spacing
 $application-padding: 1rem;
+
+// Footer
+$footer-padding: 2rem 1rem;
+$footer-background: color.change(colors.$gray-1000, $alpha: 0.5);

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { useViewHeight } from '@/composables/viewHeight';
+import { GGlass } from '@/components/glass';
 
-defineSlots<{
+const slots = defineSlots<{
   default(props: Record<string, never>): unknown,
+  footer?(props: Record<string, never>): unknown,
 }>();
 
 const { viewHeight } = useViewHeight();
@@ -17,6 +19,14 @@ const { viewHeight } = useViewHeight();
       >
         <slot name="default" />
       </div>
+      <GGlass
+        v-if="slots.footer"
+        :border-radius="0"
+      >
+        <div class="g-application__footer">
+          <slot name="footer" />
+        </div>
+      </GGlass>
     </div>
   </div>
 </template>
@@ -37,6 +47,9 @@ const { viewHeight } = useViewHeight();
 }
 
 .g-application__scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow-y: auto;
   width: 100%;
   height: 100%;
@@ -47,5 +60,9 @@ const { viewHeight } = useViewHeight();
   flex-direction: column;
   flex: 1 1 auto;
   padding: variables.$application-padding;
+}
+
+.g-application__footer {
+  padding: variables.$footer-padding;
 }
 </style>

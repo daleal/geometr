@@ -1,7 +1,17 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+
 defineSlots<{
   default(props: Record<string, never>): unknown,
 }>();
+
+const props = withDefaults(defineProps<{
+  borderRadius?: number,
+}>(), {
+  borderRadius: 1,
+});
+
+const borderRadius = computed(() => `${props.borderRadius}rem`);
 </script>
 
 <template>
@@ -17,7 +27,7 @@ defineSlots<{
   display: inline-block;
   position: relative;
   padding: 0;
-  border-radius: 1rem;
+  border-radius: v-bind(borderRadius);
   background-color: variables.$glass-background-color;
   backdrop-filter: blur(1rem) saturate(180%);
   border: 1px solid variables.$glass-border-color;
