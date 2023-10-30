@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { GApplication } from '@/components/application';
 import { GButton } from '@/components/button';
+import { GText } from '@/components/text';
 import { useModal } from '@/composables/modal';
 import { GModal } from './index';
 
@@ -24,6 +25,7 @@ const BaseStory = (slots: { default: () => JSX.Element, title?: () => JSX.Elemen
     return (
       <GApplication>
         <div>
+          {/* @ts-expect-error: missmatch on component typing between .vue and .tsx */}
           <GButton onClick={open}>
             Open!
           </GButton>
@@ -40,14 +42,14 @@ const BaseStory = (slots: { default: () => JSX.Element, title?: () => JSX.Elemen
 export const ModalWithContent = {
   ...BaseStory({
     title: () => <>Some Title</>,
-    default: () => <>This is a modal!</>,
+    default: () => <GText>This is a modal!</GText>,
   }),
 } satisfies Story;
 
 export const ModalWithLargeContent = {
   ...BaseStory({
     title: () => <>Some Title</>,
-    default: () => <>
+    default: () => <GText>
       This is a modal! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Mauris imperdiet porttitor odio vel viverra. Sed cursus gravida enim et mattis.
       Vivamus eu velit tempus, ullamcorper metus vitae, iaculis libero.
@@ -56,13 +58,13 @@ export const ModalWithLargeContent = {
       Duis gravida erat id lectus tristique rutrum.
       Praesent vitae faucibus tellus.
       Mauris eu mauris egestas, consectetur lectus et, semper dolor.
-    </>,
+    </GText>,
   }),
 } satisfies Story;
 
 export const PersistentModalWithContent = {
   ...BaseStory({
-    default: () => <>This is a modal!</>,
+    default: () => <GText>This is a modal!</GText>,
   }),
   args: {
     persistent: true,
