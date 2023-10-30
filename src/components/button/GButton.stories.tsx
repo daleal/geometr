@@ -27,6 +27,7 @@ const BaseStory = (slots: { default?: () => JSX.Element, icon?: () => JSX.Elemen
   render: (args) => (
     <GApplication>
       <div>
+        {/* @ts-expect-error: missmatch on component typing between .vue and .tsx */}
         <GButton {...args} onClick={onClickAction}>
           { slots }
         </GButton>

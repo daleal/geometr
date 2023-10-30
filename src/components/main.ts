@@ -2,6 +2,8 @@ export * from './application';
 export * from './button';
 export * from './card';
 export * from './glass';
+export * from './heading';
 export * from './input';
 export * from './modal';
 export * from './separator';
+export * from './text';

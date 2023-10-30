@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { GGlass } from '@/components/glass';
+import { GHeading } from '@/components/heading';
 
 defineSlots<{
   title?(props: Record<string, never>): unknown,
@@ -42,20 +43,21 @@ onClickOutside(modalRef, () => {
               ref="modalRef"
               class="g-modal__modal"
             >
-              <div
+              <GHeading
                 v-if="!props.persistent"
+                type="h6"
                 class="g-modal__header"
               >
-                <div class="g-modal__header--title">
+                <span class="g-modal__header--title">
                   <slot name="title" />
-                </div>
-                <div
+                </span>
+                <span
                   class="g-modal__header--close"
                   @click="closeModal"
                 >
                   <span class="mdi mdi-window-close" />
-                </div>
-              </div>
+                </span>
+              </GHeading>
               <div class="g-modal__content">
                 <slot name="default" />
               </div>
@@ -113,10 +115,6 @@ onClickOutside(modalRef, () => {
 .g-modal__header {
   display: flex;
   justify-content: space-between;
-  font-size: variables.$modal-header-font-size;
-  font-weight: variables.$modal-header-font-weight;
-  letter-spacing: variables.$modal-header-letter-spacing;
-  line-height: variables.$modal-header-line-height;
   padding: variables.$modal-header-padding;
   border-bottom: variables.$modal-header-border-bottom;
 }

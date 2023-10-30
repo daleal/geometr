@@ -1,0 +1,38 @@
+@use "@/styles/tools";
+@use "@/styles/tokens/settings/fonts";
+
+// H1
+$h1-font-size: tools.map-deep-get(fonts.$fonts, "h1", "size");
+$h1-font-weight: tools.map-deep-get(fonts.$fonts, "h1", "weight");
+$h1-line-height: tools.map-deep-get(fonts.$fonts, "h1", "line-height");
+$h1-letter-spacing: tools.map-deep-get(fonts.$fonts, "h1", "letter-spacing");
+
+// H2
+$h2-font-size: tools.map-deep-get(fonts.$fonts, "h2", "size");
+$h2-font-weight: tools.map-deep-get(fonts.$fonts, "h2", "weight");
+$h2-line-height: tools.map-deep-get(fonts.$fonts, "h2", "line-height");
+$h2-letter-spacing: tools.map-deep-get(fonts.$fonts, "h2", "letter-spacing");
+
+// H3
+$h3-font-size: tools.map-deep-get(fonts.$fonts, "h3", "size");
+$h3-font-weight: tools.map-deep-get(fonts.$fonts, "h3", "weight");
+$h3-line-height: tools.map-deep-get(fonts.$fonts, "h3", "line-height");
+$h3-letter-spacing: tools.map-deep-get(fonts.$fonts, "h3", "letter-spacing");
+
+// H4
+$h4-font-size: tools.map-deep-get(fonts.$fonts, "h4", "size");
+$h4-font-weight: tools.map-deep-get(fonts.$fonts, "h4", "weight");
+$h4-line-height: tools.map-deep-get(fonts.$fonts, "h4", "line-height");
+$h4-letter-spacing: tools.map-deep-get(fonts.$fonts, "h4", "letter-spacing");
+
+// H5
+$h5-font-size: tools.map-deep-get(fonts.$fonts, "h5", "size");
+$h5-font-weight: tools.map-deep-get(fonts.$fonts, "h5", "weight");
+$h5-line-height: tools.map-deep-get(fonts.$fonts, "h5", "line-height");
+$h5-letter-spacing: tools.map-deep-get(fonts.$fonts, "h5", "letter-spacing");
+
+// H6
+$h6-font-size: tools.map-deep-get(fonts.$fonts, "h6", "size");
+$h6-font-weight: tools.map-deep-get(fonts.$fonts, "h6", "weight");
+$h6-line-height: tools.map-deep-get(fonts.$fonts, "h6", "line-height");
+$h6-letter-spacing: tools.map-deep-get(fonts.$fonts, "h6", "letter-spacing");

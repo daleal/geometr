@@ -8,24 +8,8 @@ $text-color: colors.$gray-100;
 // Body
 $card-body-padding: 1rem;
 
-// Header
-$card-header-font-size: tools.map-deep-get(fonts.$fonts, "h6", "size");
-$card-header-font-weight: tools.map-deep-get(fonts.$fonts, "h6", "weight");
-$card-header-letter-spacing: tools.map-deep-get(fonts.$fonts, "h6", "letter-spacing");
-$card-header-line-height: tools.map-deep-get(fonts.$fonts, "h6", "line-height");
-
 // Subtitle
-$card-subtitle-font-size: tools.map-deep-get(fonts.$fonts, "body-2", "size");
-$card-subtitle-font-weight: tools.map-deep-get(fonts.$fonts, "body-2", "weight");
-$card-subtitle-letter-spacing: tools.map-deep-get(fonts.$fonts, "body-2", "letter-spacing");
-$card-subtitle-line-height: tools.map-deep-get(fonts.$fonts, "body-2", "line-height");
 $card-subtitle-opacity: 0.6;
-
-// Content
-$card-content-font-size: tools.map-deep-get(fonts.$fonts, "body-2", "size");
-$card-content-font-weight: tools.map-deep-get(fonts.$fonts, "body-2", "weight");
-$card-content-letter-spacing: tools.map-deep-get(fonts.$fonts, "body-2", "letter-spacing");
-$card-content-line-height: tools.map-deep-get(fonts.$fonts, "body-2", "line-height");
 
 // Actions
 $card-actions-padding: 0 1rem 1rem 1rem;
