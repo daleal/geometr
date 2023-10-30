@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-    height?: number,
-  }>(), {
+  height?: number,
+}>(), {
   height: 1,
 });
 </script>
