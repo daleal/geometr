@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { GGlass } from '@/components/glass';
+import { GHeading } from '@/components/heading';
 import { GSeparator } from '@/components/separator';
+import { GText } from '@/components/text';
 
 const slots = defineSlots<{
   default?(props: Record<string, never>): unknown,
@@ -17,22 +19,23 @@ const slots = defineSlots<{
       v-if="slots.header || slots.subtitle || slots.default || slots.content"
       class="g-card__body"
     >
-      <div
+      <GHeading
         v-if="slots.header"
-        class="g-card__header"
+        type="h6"
       >
         <slot name="header" />
-      </div>
-      <div
+      </GHeading>
+      <GText
         v-if="slots.subtitle"
+        type="body-2"
         class="g-card__subtitle"
       >
         <slot name="subtitle" />
-      </div>
+      </GText>
       <GSeparator v-if="(slots.header || slots.subtitle) && (slots.default || slots.content)" />
-      <div
+      <GText
         v-if="slots.default || slots.content"
-        class="g-card__content"
+        type="body-2"
       >
         <slot
           v-if="slots.content"
@@ -42,7 +45,7 @@ const slots = defineSlots<{
           v-else
           name="default"
         />
-      </div>
+      </GText>
     </div>
     <GSeparator v-if="!(slots.header || slots.subtitle || slots.default || slots.content)" />
     <div
@@ -67,26 +70,8 @@ const slots = defineSlots<{
   padding: variables.$card-body-padding;
 }
 
-.g-card__header {
-  font-size: variables.$card-header-font-size;
-  font-weight: variables.$card-header-font-weight;
-  letter-spacing: variables.$card-header-letter-spacing;
-  line-height: variables.$card-header-line-height;
-}
-
 .g-card__subtitle {
-  font-size: variables.$card-subtitle-font-size;
-  font-weight: variables.$card-subtitle-font-weight;
-  letter-spacing: variables.$card-subtitle-letter-spacing;
-  line-height: variables.$card-subtitle-line-height;
   opacity: variables.$card-subtitle-opacity;
-}
-
-.g-card__content {
-  font-size: variables.$card-content-font-size;
-  font-weight: variables.$card-content-font-weight;
-  letter-spacing: variables.$card-content-letter-spacing;
-  line-height: variables.$card-content-line-height;
 }
 
 .g-card__actions {
