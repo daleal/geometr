@@ -2,6 +2,8 @@ name: chromatic
 
 on:
   pull_request:
+    branches-ignore:
+      - stable
     paths:
       - ".github/workflows/chromatic.yml"
       - "src/**"
@@ -14,6 +16,8 @@ on:
 
 jobs:
   chromatic:
+    if: ${{ !startsWith(github.head_ref, 'release/prepare-') }}
+
     runs-on: ubuntu-22.04
 
     steps:
