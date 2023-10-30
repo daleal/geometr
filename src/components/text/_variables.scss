@@ -1,0 +1,33 @@
+@use "@/styles/tools";
+@use "@/styles/tokens/settings/fonts";
+
+// Bold Tag
+$bold-font-weight: bolder;
+
+// Subtitle 1
+$subtitle-1-font-size: tools.map-deep-get(fonts.$fonts, "subtitle-1", "size");
+$subtitle-1-font-weight: tools.map-deep-get(fonts.$fonts, "subtitle-1", "weight");
+$subtitle-1-line-height: tools.map-deep-get(fonts.$fonts, "subtitle-1", "line-height");
+$subtitle-1-letter-spacing: tools.map-deep-get(fonts.$fonts, "subtitle-1", "letter-spacing");
+$subtitle-1-text-transform: tools.map-deep-get(fonts.$fonts, "subtitle-1", "text-transform");
+
+// Subtitle 2
+$subtitle-2-font-size: tools.map-deep-get(fonts.$fonts, "subtitle-2", "size");
+$subtitle-2-font-weight: tools.map-deep-get(fonts.$fonts, "subtitle-2", "weight");
+$subtitle-2-line-height: tools.map-deep-get(fonts.$fonts, "subtitle-2", "line-height");
+$subtitle-2-letter-spacing: tools.map-deep-get(fonts.$fonts, "subtitle-2", "letter-spacing");
+$subtitle-2-text-transform: tools.map-deep-get(fonts.$fonts, "subtitle-2", "text-transform");
+
+// Body 1
+$body-1-font-size: tools.map-deep-get(fonts.$fonts, "body-1", "size");
+$body-1-font-weight: tools.map-deep-get(fonts.$fonts, "body-1", "weight");
+$body-1-line-height: tools.map-deep-get(fonts.$fonts, "body-1", "line-height");
+$body-1-letter-spacing: tools.map-deep-get(fonts.$fonts, "body-1", "letter-spacing");
+$body-1-text-transform: tools.map-deep-get(fonts.$fonts, "body-1", "text-transform");
+
+// Body 2
+$body-2-font-size: tools.map-deep-get(fonts.$fonts, "body-2", "size");
+$body-2-font-weight: tools.map-deep-get(fonts.$fonts, "body-2", "weight");
+$body-2-line-height: tools.map-deep-get(fonts.$fonts, "body-2", "line-height");
+$body-2-letter-spacing: tools.map-deep-get(fonts.$fonts, "body-2", "letter-spacing");
+$body-2-text-transform: tools.map-deep-get(fonts.$fonts, "body-2", "text-transform");
