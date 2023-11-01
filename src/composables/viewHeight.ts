@@ -9,8 +9,9 @@ import {
   onUnmounted,
   ref,
 } from 'vue';
+import { getWindow } from '@/utils/window';
 
-const INITIAL_VIEW_HEIGHT = window?.innerHeight || 1000;
+const INITIAL_VIEW_HEIGHT = getWindow()?.innerHeight || 1000;
 const rawViewHeight = ref(INITIAL_VIEW_HEIGHT);
 
 export const useViewHeight = () => {
