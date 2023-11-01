@@ -10,7 +10,8 @@ import {
   ref,
 } from 'vue';
 
-const rawViewHeight = ref(window.innerHeight);
+const INITIAL_VIEW_HEIGHT = window?.innerHeight || 1000;
+const rawViewHeight = ref(INITIAL_VIEW_HEIGHT);
 
 export const useViewHeight = () => {
   const setViewHeight = () => {
